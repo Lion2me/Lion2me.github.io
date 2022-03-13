@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-05T11:53:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jekyll Serial Programmer</title><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><entry><title type="html">JPA</title><link href="http://localhost:4000/posts/JPA%EB%8A%94/" rel="alternate" type="text/html" title="JPA" /><published>2021-12-15T21:05:23+09:00</published><updated>2021-12-15T21:05:23+09:00</updated><id>http://localhost:4000/posts/JPA%EB%8A%94</id><content type="html" xml:base="http://localhost:4000/posts/JPA%EB%8A%94/">&lt;h2 id=&quot;jpa에-대해서&quot;&gt;JPA에 대해서&lt;/h2&gt;
+
+&lt;p&gt;쓸 내용은
+ORM이란
+JPA는?
+영속성 컨텍스트
+엔티티 매니저&lt;/p&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="Spring" /><summary type="html">JPA에 대해서</summary></entry><entry><title type="html">Jekyll Markdown</title><link href="http://localhost:4000/posts/jekyll-markdown/" rel="alternate" type="text/html" title="Jekyll Markdown" /><published>2021-11-04T00:00:00+09:00</published><updated>2021-11-04T00:00:00+09:00</updated><id>http://localhost:4000/posts/jekyll-markdown</id><content type="html" xml:base="http://localhost:4000/posts/jekyll-markdown/">&lt;p&gt;Text can be &lt;strong&gt;bold&lt;/strong&gt;, &lt;em&gt;italic&lt;/em&gt;, &lt;del&gt;strikethrough&lt;/del&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;keyword&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./another-page.html&quot;&gt;Link to another page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;There should be whitespace between paragraphs.&lt;/p&gt;
+
+&lt;p&gt;There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.&lt;/p&gt;
+
+&lt;h4 id=&quot;image&quot;&gt;Image&lt;/h4&gt;
+
+&lt;p&gt;Images can be clicked to enlarge :) .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://picsum.photos/800/300&quot; alt=&quot;Dummy Image&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;header-1&quot;&gt;Header 1&lt;/h1&gt;
+
+&lt;p&gt;This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.&lt;/p&gt;
+
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is a blockquote following a header.&lt;/p&gt;
+
+  &lt;p&gt;When something is important enough, you do it even if the odds are not in your favor.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This is another blockquote following header 3&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Javascript code with syntax highlighting.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;dateformat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i18n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;./lang/&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Ruby code with syntax highlighting&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;GitHubPages&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Dependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;gems&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;= &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an unordered list following a header.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+  &lt;li&gt;This is an ordered list following a header.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;/h6&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;head1&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;head two&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;three&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ok&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good swedish fish&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;nice&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;out of stock&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good and plenty&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;nice&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ok&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;oreos&lt;/code&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;hmm&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ok&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;good &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;zoute&lt;/code&gt; drop&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;yumm&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;theres-a-horizontal-rule-below-this&quot;&gt;There’s a horizontal rule below this.&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;here-is-an-unordered-list&quot;&gt;Here is an unordered list:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item foo&lt;/li&gt;
+  &lt;li&gt;Item bar&lt;/li&gt;
+  &lt;li&gt;Item baz&lt;/li&gt;
+  &lt;li&gt;Item zip&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;and-an-ordered-list&quot;&gt;And an ordered list:&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item one
+    &lt;ol&gt;
+      &lt;li&gt;Item one&lt;/li&gt;
+      &lt;li&gt;Item two
+        &lt;ol&gt;
+          &lt;li&gt;Item one&lt;/li&gt;
+          &lt;li&gt;Item two&lt;/li&gt;
+          &lt;li&gt;Item three&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Item three&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item four&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+  &lt;li&gt;Item three&lt;/li&gt;
+  &lt;li&gt;Item four&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;and-a-nested-list&quot;&gt;And a nested list:&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;level 1 item
+    &lt;ul&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item
+        &lt;ul&gt;
+          &lt;li&gt;level 3 item&lt;/li&gt;
+          &lt;li&gt;level 3 item&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;level 1 item
+    &lt;ul&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;level 1 item
+    &lt;ul&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+      &lt;li&gt;level 2 item&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;level 1 item&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The final element.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="jekyll" /><summary type="html">Text can be bold, italic, strikethrough or keyword</summary></entry><entry><title type="html">CNN에 대해서</title><link href="http://localhost:4000/posts/CNN%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/" rel="alternate" type="text/html" title="CNN에 대해서" /><published>2021-09-25T21:05:23+09:00</published><updated>2021-09-25T21:05:23+09:00</updated><id>http://localhost:4000/posts/CNN%EC%97%90%20%EB%8C%80%ED%95%B4%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/posts/CNN%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/">&lt;h2 id=&quot;cnn에-대해서&quot;&gt;CNN에 대해서&lt;/h2&gt;
+
+&lt;p&gt;CNN은 &lt;strong&gt;Convolutional Neural Network의 약자&lt;/strong&gt;입니다. 한글로는 &lt;strong&gt;합성곱 신경망&lt;/strong&gt;이라고 말 할 수 있겠네요.&lt;/p&gt;
+
+&lt;h3 id=&quot;cnn은-무엇인가&quot;&gt;CNN은 무엇인가?&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Convolution Layer가 포함되어 있는 Neural Net을 우리는 CNN이라고 부릅니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면 우리는 Convolution Layer가 무엇인지 알아봐야겠네요.&lt;/p&gt;
+
+&lt;h4 id=&quot;convolution-layer란&quot;&gt;Convolution Layer란?&lt;/h4&gt;
+
+&lt;p&gt;Convolution Layer는 고양이가 보는 것마다 자극받는 뇌의 위치가 다른 것을 보고 영감을 받아 만들어진 &lt;strong&gt;각기 다른 필터를 통해 같은 이미지를 다르게 표현하는 방식입니다.&lt;/strong&gt; 여기서 표현이란 새로운 특징으로 만들어내는 것이며, 이것을 우리는 &lt;strong&gt;Activation Map&lt;/strong&gt;이라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;실생활에 비유하자면, 다양한 &lt;strong&gt;색안경을 낀 사람들에게 한 사진을 보여주었을 때 보이는 시각을 다음 레이어에게 전달하는 학습&lt;/strong&gt;을 한다고 생각하면 될 것 같네요. 각 색안경은 다른 이미지를 만들어내고, 그 이미지들에서 특징을 추출하면 대상에 대한 다양한 시각에서의 특징을 얻어 낼 수 있을테니까요.&lt;/p&gt;
+
+&lt;p&gt;여기서 우리가 주의깊게 볼 사항은 &lt;strong&gt;색안경&lt;/strong&gt; 즉 &lt;strong&gt;필터&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 필터를 통해 데이터를 바라보는 과정에 대해서 알아보겠습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;convolution-과정&quot;&gt;Convolution 과정&lt;/h4&gt;
+
+&lt;p&gt;우선 5x5의 크기를 가진 데이터가 있다고 생각해보겠습니다. 그리고 3x3의 크기를 가진 Filter를 하나 만들어보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;그리고 데이터를 Filter의 크기로 쪼개어 각 위치의 값을 곱한 뒤 합산해주면 우리가 원하는 필터를 통과 한 값이 등장하게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;이 과정을 전체 데이터에 적용시켜주면 우리는 데이터를 필터를 통과 시켜서 새롭게 표현 한 Activation Map을 얻을 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;전반적인 과정을 눈으로 확인했으니 조금 더 정확하게 살펴보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;먼저 데이터의 크기는 5x5였습니다. 하지만 조금 더 깊게 표현해서 하나의 데이터를 다음과 같이 표현하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;너비와 높이가 5이면서 채널 수가 1개인 데이터 1개&lt;/strong&gt;라고 표현하겠습니다. 이미지를 표현 할 때 사용하는 Width, Height, Channel를 이용했습니다. 여기서 채널이란 곧 RGB/HSV와 같은 색상을 나타는 수로 주로 사용됩니다.&lt;/p&gt;
+
+&lt;p&gt;마찬가지로 Filter를 표현하면 &lt;strong&gt;너비와 높이가 3이면서 채널 수가 1개인 필터 1개&lt;/strong&gt;라고 표현하겠습니다. 하지만 필터의 갯수는 곧 채널로 표현 할 수 있기 때문에 갯수는 생각하지 않겠습니다.&lt;/p&gt;
+
+&lt;p&gt;그러면 우리는 한 칸씩만 움직 일 수 있나요?&lt;/p&gt;
+
+&lt;p&gt;아닙니다. 우리에게는 &lt;strong&gt;Stride&lt;/strong&gt;가 있습니다. 학습 할 때 필터를 얼마나 이동시킬 것 인지를 나타내는 Stride는 기본적으로 1을 사용하고 있지만, 데이터의 크기에 영향을 주는 파라미터이기 때문에 다른 방식으로 사용되기도 합니다.&lt;/p&gt;
+
+&lt;p&gt;Stride가 1이라면 한 칸씩 이동하는 방식이며 2라면 두 칸씩 움직이며 필터를 통과시킵니다. 그리고 Filter의 크기와 Stride의 크기로 인해 데이터는 압축되게 됩니다. 다음의 공식은 Output의 크기를 나타내고 있습니다.&lt;/p&gt;
+
+\[OutputSize(Width,Height) = (((Width_{D} - Width_{C})/stride) + 1 , ((Height_{D} - Height_{C})/stride )+ 1)\]
+
+&lt;h4 id=&quot;무언가-이상한-점이-있다&quot;&gt;무언가 이상한 점이 있다?!&lt;/h4&gt;
+
+&lt;p&gt;필터를 통과할 때 마다 데이터가 작아지는 것을 알 수 있습니다. 우리는 그 데이터를 &lt;strong&gt;원본 데이터의 특징이 될 수 있는 요소를 담고 있다&lt;/strong&gt;고 생각하기 때문에 끄덕이며 Activation Map을 사용하여 모델을 만들면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;근데 이상한 점이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;날카로운 학생은 &lt;strong&gt;“각 모서리에 있는 데이터는 1번만 학습되지 않아요?”&lt;/strong&gt; 라는 질문이 들어 올 수 있습니다. 왜냐하면 필터의 크기에 따라서 학습되면 데이터의 한 부분은 필터의 Width/Stride번 만큼 학습이 됩니다만, 가장 첫 번째에 위치한 데이터는 딱 한번 학습 한 뒤에 필터는 떠나가버립니다.&lt;/p&gt;
+
+&lt;p&gt;이런 이유로 학습이 진행되면서 &lt;strong&gt;필터에 크기에 따라서 점점 다음 레이어에 도달하는 Activation Map이 점점 작아지면서 데이터 유실&lt;/strong&gt;이 발생합니다.&lt;/p&gt;
+
+&lt;p&gt;그러면 어떻게 첫번째 요소를 Width/Stride번 만큼 학습 할 수 있을까요? 결과적으로 데이터의 유실을 막을 수 있는 방법이 있을까요?&lt;/p&gt;
+
+&lt;p&gt;여기서 Padding이 등장합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;padding&quot;&gt;Padding&lt;/h4&gt;
+
+&lt;p&gt;Padding은 데이터에 아무 의미가 없는 값을 추가해서 학습하는 과정에서 다음 레이어에 전달되는 데이터의 크기를 유지하기 위해 사용하는 기법입니다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면 이전 예제를 보면 5x5의 데이터를 3x3 필터를 통과시켰을 때 우리는 3x3의 정보를 다음 레이어에게 넘겨주었습니다. 하지만 입력 데이터를 다음과 같이 넓히면 어떨까요?&lt;/p&gt;
+
+&lt;p&gt;[그림]&lt;/p&gt;
+
+&lt;p&gt;데이터의 크기가 7x7가 되었고 필터는 3x3입니다. Stride가 1이라는 가정하에 다음 레이어에 전달 할 Activation Map의 크기를 알아보면 다음과 같습니다.&lt;/p&gt;
+
+\[Size = (7-3)/1 + 1 = 5\]
+
+&lt;p&gt;즉 입력 데이터와 동일한 크기의 5x5 Activation Map이 다음 레이어에게 전달되게 됩니다. 일반적으로 Padding을 사용 할 때는 입력 된 데이터의 크기가 결과로 나올 수 있도록 하는 것이 일반적입니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;pooling&quot;&gt;Pooling&lt;/h4&gt;
+
+&lt;p&gt;그렇다면 무조건 Activation Map은 크기가 고정적인 것이 좋을까요?
+그렇지는 않습니다.&lt;/p&gt;
+
+&lt;p&gt;우리가 Padding을 사용 한 이유는 &lt;strong&gt;데이터의 유실&lt;/strong&gt;을 대비하기 위함이 큽니다.&lt;/p&gt;
+
+&lt;p&gt;학습을 진행 할 때 특히나 이미지와 같이 높은 차원의 데이터를 분석할 때는 &lt;strong&gt;중요한 특징&lt;/strong&gt;을 찾아주는 것이 중요합니다.&lt;/p&gt;
+
+&lt;p&gt;2048*2048의 픽셀 크기를 가진 이미지를 24개의 레이어를 통해 100만 장 학습하는 일이 생긴다면, 섬뜩한 연산 횟수가 발생 할 것을 우리는 알고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그러면 Activation Map을 만드는 과정에서 특징만을 추출하는 방법을 사용 할 수 있지 않을까요?
+이 생각에서 Pooling이 만들어졌습니다.&lt;/p&gt;
+
+&lt;p&gt;MaxPooling / MinPooling / MeanPooling 은 각각 해당 Pooling 필터를 통과하면서 발생하는 최대값, 최솟값, 평균(때로는 중앙)값으로 결과를 만드는 필터링 방식입니다.&lt;/p&gt;
+
+&lt;p&gt;하지만, stride(필터의 이동거리)만을 이용해서 굳이 Pooling을 사용하지 않고 크기를 줄이는 방법도 좋은 성과를 낸다고 합니다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="ML" /><summary type="html">CNN에 대해서</summary></entry><entry><title type="html">Spring Boot</title><link href="http://localhost:4000/posts/SpringBoot/" rel="alternate" type="text/html" title="Spring Boot" /><published>2021-09-25T21:05:23+09:00</published><updated>2021-09-25T21:05:23+09:00</updated><id>http://localhost:4000/posts/SpringBoot</id><content type="html" xml:base="http://localhost:4000/posts/SpringBoot/">&lt;h2 id=&quot;spring-boot&quot;&gt;Spring Boot&lt;/h2&gt;
+
+&lt;p&gt;이전 회사를 다닐 때 Spring Framework로 프로젝트를 진행했었는데 이번에 Spring Boot를 공부하면서 “아.. 내가 너무 부족했구나”라는 생각을 하고 다시 공부를 시작합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;공부할게 많아서 정말 정말 행복하지만! 재취업 먼저 되었으면..!&lt;/del&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;spring-boot가-무엇인가&quot;&gt;Spring Boot가 무엇인가?&lt;/h2&gt;
+
+&lt;p&gt;기본적으로 Spring Framework의 업데이트 버전으로 이해 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;기존의 Spring Framework는 웹 애플리케이션을 만들기 위해서는 정말 다양한 설정을 거치고, 그 설정에 대해서 이해해야 했습니다. 하지만 Spring Boot는 그러한 설정을 매우 간략하게 만듭니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 얼마나 편해졌는지 확인해보겠습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;의존성&quot;&gt;의존성&lt;/h4&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jpa&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;redis&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reactive&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mustache&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;oauth2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;web&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parent&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;jpa&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;implementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webflux&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;testImplementation&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;boot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;starter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Gradle로 설정 한 위의 의존 라이브러리들을 보시면 대부분 spring-boot-starter로 시작하는 것을 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;각각의 의존 라이브러리 내에는 해당 기능과 관련 된 모든 라이브러리가 포함되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;예를들면 starter-test를 보시면, JUnit이나 AssertJ, JsonPath, SpringTest 등 다양한 라이브러리등이 포함되어 있습니다.&lt;/p&gt;
+
+&lt;p&gt;기존의 springframework를 이용해서 Maven을 이용한다면 아마 수십줄의 코드가 적혀야 했을 것입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;내가 이걸 이제 알다니&lt;/del&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;db설정&quot;&gt;DB설정&lt;/h4&gt;
+
+&lt;p&gt;자바를 통해 DB를 연결한다면 기본적으로 JDBC를 연결해야 합니다.
+그리고 이전의 포스트에서 적은 내용처럼 Spring에서는 자체적으로 Spring JDBC를 제공합니다.&lt;/p&gt;
+
+&lt;p&gt;Spring Framework의 JDBC를 통해 DB에 연결하려면, 가장 처음으로 해당 Bean을 만들어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;Spring JDBC 객체를 만들기 위해 데이터베이스의 DATABASE path, id, password, RDBMS Driver 정보를 입력해주고 Spring JDBC를 만들어주고 ORM이나 SQLMapper를 사용 할 경우 관련 빈을 생성할 떄 Spring JDBC를 사용해줍니다.&lt;/p&gt;
+
+&lt;p&gt;관련 문서를 참조하면 어려운 일은 아니지만, Spring Boot는 차원이 다릅니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;spring&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;datasource&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jdbc:mariadb://localhost:3306/test&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;driver-class-name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.mariadb.jdbc.Driver&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;id&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;password&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;password&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;jpa&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;open-in-view&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;false&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;generate-ddl&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# table을 새로 만들건지&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;show-sql&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;hibernate&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;ddl-auto&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;validate&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# ddl(table 관련) 유지 방식?&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;깔끔하게 정리 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;spring-security-적용&quot;&gt;Spring Security 적용&lt;/h3&gt;
+
+&lt;p&gt;이전 Spring Framework 3 버전을 사용 했을 떄 Spring Security를 적용하기 위해서 Security 관련 xml을 별도로 만들고 관리했었습니다.&lt;/p&gt;
+
+&lt;p&gt;속성값을 이용해서 세션 정보를 수정하기도했고, 핸들러를 적용하거나 URL 설정등을 했었죠.&lt;/p&gt;
+
+&lt;p&gt;하지만 Boot 5에서는 WebSecurityConfigurerAdapter를 상속받은 클래스를 통해서 설정 할 수 있습니다.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@Configuration&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@EnableWebSecurity&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SecurityConfig&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;WebSecurityConfigurerAdapter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;configure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;HttpSecurity&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;http&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;csrf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;disable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// csrf를 비활성화 합니다!&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;authorizeRequests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 인가 과정에서 url 별 접근 권한을 나눕니다.&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;antMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/admin/**&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasRole&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ADMIN&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;antMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/user/**&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasRole&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;USER&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;antMatchers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/signup&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasRole&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ANONYMOUS&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;anyRequest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permitAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+          &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;formLogin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 로그인 시 입력 폼에서 입력 받을 내용을 설정합니다. 여기서 핸들러 설정도 가능해요!&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;loginPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/loginForm&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;usernameParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;username&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;passwordParameter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;password&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;loginProcessingUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/login&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;successHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myLoginSuccessHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;failureHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myLoginFailureHandler&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt;
+                      &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permitAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+           &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;logout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 로그아웃도 가능합니다.&lt;/span&gt;
+               &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;permitAll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+               &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;logoutUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/logout&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+               &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;logoutSuccessUrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+               &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+           &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;exceptionHandling&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+               &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;accessDeniedPage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/accessDenied_page&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;리액티브-프로그래밍&quot;&gt;리액티브 프로그래밍&lt;/h4&gt;
+
+&lt;p&gt;이 부분부터 대략 정신이 멍해집니다.&lt;/p&gt;
+
+&lt;p&gt;리액티브 프로그래밍 심지어 자바를 이용해서 Spring에 사용하는 webflux는 추후에 공부를 하고 포스팅하도록 하겠습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;스프링 부트 공부를 시작하면서 느낀 점은, Spring Framework로 개발을 시작한 제가 다시 한번 “무언가 만들어 볼 수 있겠다”는 자신감이 생기는 기분입니다.&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="Spring" /><summary type="html">Spring Boot</summary></entry><entry><title type="html">Gradient에 대해서</title><link href="http://localhost:4000/posts/Gradient%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/" rel="alternate" type="text/html" title="Gradient에 대해서" /><published>2021-09-23T21:05:23+09:00</published><updated>2021-09-23T21:05:23+09:00</updated><id>http://localhost:4000/posts/Gradient%EC%97%90%20%EB%8C%80%ED%95%B4%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/posts/Gradient%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/">&lt;h2 id=&quot;gradient에-대해서&quot;&gt;Gradient에 대해서&lt;/h2&gt;
+
+&lt;p&gt;딥러닝에서 가중치를 학습하는 과정에서 필수적으로 사용하는 Gradient를 알아봅니다.&lt;/p&gt;
+
+&lt;p&gt;Layer를 통한 인공지능 학습을 진행하는 것은 추후 [포스팅]을 진행하겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;gradient는-무엇인가&quot;&gt;Gradient는 무엇인가?&lt;/h3&gt;
+
+&lt;p&gt;사전적인 의미로 &lt;strong&gt;Gradient는 “기울기”입니다.&lt;/strong&gt; 그러면 무엇의 기울기인지 알아봐야 할 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;딥러닝을 통해 우리가 알고 싶은 것은 실제 값의 분포를 표현하는 &lt;strong&gt;어떠한 규칙&lt;/strong&gt;에 가능한 가깝게 예측 할 수 있는 모델입니다.&lt;/p&gt;
+
+&lt;p&gt;너무나 실제 학습 데이터에 가깝게 예측해버리면 우리는 Over Fitting이라고 하고 반대로 너무 실제 학습 데이터에 멀리 예측해버리면 우리는 Under Fitting이라고 하죠.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;즉, Fitting을 통해 우리는 실제 분포에 가깝게 표현하고 과하지도 부족하지도 않게 학습을 진행합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Gradient는 이 Fitting을 하는 과정에서 사용되는 기울기입니다.&lt;/p&gt;
+
+\[\hat{Y} = xW + b\]
+
+&lt;p&gt;위의 Hyperthesis를 연산하는 과정에서 우리는 $W$와 $b$를 바꾸어 $\hat{Y}$를 실제 값의 분포인 $Y$에 가깝도록 만들어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;우리는 실제 값에서 Hyperthesis를 통해 얻어진 값의 차이를 &lt;strong&gt;Loss&lt;/strong&gt;라고 표현하며 &lt;strong&gt;우리가 얼마나 잘못 예측했는지&lt;/strong&gt;를 알 수 있습니다.&lt;/p&gt;
+
+\[Loss_{MSE} = \sum(Y - (xW+b))^2\]
+
+&lt;p&gt;그러면 $W$와 $b$를 최적화하는 것이 무엇을 말하는 걸까요?
+&lt;strong&gt;$W$값이 작아지거나 커지거나&lt;/strong&gt; 혹은 &lt;strong&gt;$b$값이 커지거나 작아지거나&lt;/strong&gt; 와 같은 변화가 발생하는 것이 최적화하는 방법입니다. 그래야 $\hat{Y}$의 값이 바뀌고 $Loss$가 줄어드니까요.&lt;/p&gt;
+
+&lt;p&gt;그럼 이렇게 말할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;“$Loss$가 줄어드는 방향으로 $W$와 $b$가 이동하는구나”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;그러면 의문이 구체화됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;“$Loss$가 줄어드는 방향은 어떤 방향일까?”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이 의문을 해결하기 위해 Gradient가 존재합니다. 우리는 다음의 과정을 통해 예측을 한다고 생각해보겠습니다.&lt;/p&gt;
+
+\[\hat{Y} = xW + b\]
+
+&lt;p&gt;위의 식이 주어질 때 이러한 질문을 받으면 어떻게 대답할 수 있을까요?
+&lt;strong&gt;“$x$가 1커질 때 **$\hat{Y}$&lt;/strong&gt; 은 어떻게 변하나요?”**
+답은 “$W$만큼 커집니다.”입니다.&lt;/p&gt;
+
+&lt;p&gt;이 사실을 우리는 &lt;strong&gt;편미분&lt;/strong&gt;을 통해 알 수 있죠. $\hat{Y}$를 $x$로 편미분을 하면 우리가 알고싶은 &lt;strong&gt;x가 1증가 할 때 \hat{Y}에 미치는 영향&lt;/strong&gt;을 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이러한 방식을 &lt;strong&gt;Backpropergation&lt;/strong&gt;이라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;이걸 그대로 적용해서 Layer에 적용해봅시다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FC Layer(1) -&amp;gt; Sigmoid Layer -&amp;gt; FC Layer(2) -&amp;gt; Sigmoid Layer -&amp;gt; FC Layer(3) -&amp;gt; $Loss_{Y-Output}$&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Loss에서 역방향으로 편미분을 통해서 각 파라미터가 얼마나 영향을 가지고 있는지 알아봅니다. $Loss$를 $W_3$으로 편미분하면 $W_3$이 $Loss$에 얼마나 영향을 미치는지 알 수 있겠네요. 마찬가지로 $x_3$을 $W_2$로 편미분하면 $x_3$에 $W_2$가 얼마나 영향을 미치는지 알 수 있습니다. &lt;del&gt;물론 Sigmoid를 통과 한 후의 결과에 대한 값이지만, 설명에서는 활성화함수 연산을 무시하겠습니다.&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 그 값을 식으로 적으면 다음과 같습니다.&lt;/p&gt;
+
+\[\frac{\partial{Loss}}{\partial{W_1}} = \frac{\partial{Loss}}{\partial{W_3}} \frac{\partial{W_3}}{\partial{W_2}} \frac{\partial{W_2}}{\partial{W_1}}\]
+
+&lt;p&gt;여기서 $\frac{\partial{Loss}}{\partial{x_1}}$ 가 의미하는 바가 &lt;strong&gt;$W_1$이 Loss에 미치는 영향&lt;/strong&gt; 이라는 점을 알면 연산이 얼마나 간소화 되는지 알 수 있습니다. 이러한 방식을 &lt;strong&gt;Chain Rule&lt;/strong&gt;을 통한 Gradient 계산이라고 말합니다.&lt;/p&gt;
+
+&lt;p&gt;우리는 이제 &lt;strong&gt;$W_i$&lt;/strong&gt; 가 $Loss$에 미치는 영향을 알 수 있는 무기가 생겼습니다. 상세하게 말하면 &lt;strong&gt;$W$가 양 또는 음의 영향을 미치는지 추가적으로 얼마나 크게 영향을 미치는지&lt;/strong&gt; 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이제 $Loss$를 줄이고 싶다면 $W$를 음의 방향으로 움직이게 하고 반대라면 양의 방향으로 움직이게 하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;해당 미분값이 양수라면 $W$를 크게 하면 $Loss$가 커지고 반대로 작게하면 $Loss$가 작아지는 걸 알 수 있습니다.
+만약 음수라면 $W$를 크게 하면 $Loss$가 작아지고 반대로 작게하면 $Loss$는 작아집니다.
+이해하기 쉬운 그래프를 하나 더 올리겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/gradient1.png&quot; width=&quot;700&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Y축은 Loss이고, X축은 W라고 생각하시면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;이제 Gradient가 무엇인지 알 수 있습니다. 위의 그림에서 &lt;strong&gt;우리는 경사를 따라 내려가는 학습을 진행합니다.&lt;/strong&gt; 그리고 그 경사가 &lt;strong&gt;Gradient&lt;/strong&gt; 입니다.
+그리고 이러한 학습 방식이 &lt;strong&gt;Gradient Descent&lt;/strong&gt; 입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;그러면-gradient-descent는-어떻게-진행할까&quot;&gt;그러면 Gradient Descent는 어떻게 진행할까?&lt;/h3&gt;
+
+&lt;p&gt;Gradient Descent는 $W$의 순간변화율을 구하고 $Loss$가 최소가 될 수 있는 방향으로 이동하는 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;계속해서 $Loss$가 최소가 되는 방향으로 학습을 하다보면 기울기는 점점 0에 가까워집니다. 그러다보면 점점 학습은 수렴하게 되는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;여기까지만 계산하면 다음의 식이 나오겠네요.&lt;/p&gt;
+
+&lt;p&gt;$W = W - \frac{\partial{Loss}}{\partial{W}}$&lt;/p&gt;
+
+&lt;p&gt;그런데 이렇게 학습을 진행해버리면 문제가 생깁니다. 한 번의 학습으로 $W$가 너무 크게 학습되어버리면 기울기가 0으로 수렴하지 않을 수 있습니다. 혹은 아예 튕겨져 나갈수도? 있겠네요.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/gradient2.png&quot; width=&quot;470&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;여기서 Learning Rate가 등장합니다.&lt;/p&gt;
+
+&lt;p&gt;$W = W - lr\frac{\partial{Loss}}{\partial{x}}$&lt;/p&gt;
+
+&lt;p&gt;Learning Rate가 있으니 학습은 천천히 진행됩니다. 예를들면 Learning Rate가 0.01이라면 다음의 식이 되겠네요.&lt;/p&gt;
+
+&lt;p&gt;$W = W - 0.01\frac{\partial{Loss}}{\partial{x}}$&lt;/p&gt;
+
+&lt;p&gt;학습의 진행도 다음처럼 천천히 진행되게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/gradient3.png&quot; width=&quot;700&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;gradient-descent의-문제점은-무엇일까&quot;&gt;Gradient Descent의 문제점은 무엇일까?&lt;/h3&gt;
+
+&lt;p&gt;####지역 최소점&lt;/p&gt;
+
+&lt;p&gt;Gradient를 따라 하강하는 과정을 거치면 우리는 &lt;strong&gt;항상 최소의 Loss를 알 수 있을까요?&lt;/strong&gt; 사실은 그렇지 않습니다.&lt;/p&gt;
+
+&lt;p&gt;현재 하강하고 있는 Gradient가 최소 $Loss$를 얻을 수 있는 Gradient가 아닐 수 있거든요. 예를 들면 다음의 그래프로 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/gradient4.png&quot; width=&quot;700&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위의 그래프는 Gradient가 0으로 수렴해가지만 최소 Loss와는 거리가 멀어보입니다. 이렇듯 최소 $Loss$가 아니지만 경사를 따라 학습되어지는 최소지점을 &lt;strong&gt;지역 최소점&lt;/strong&gt;이라고 합니다.&lt;/p&gt;
+
+&lt;p&gt;이 문제는 Learning Rate를 잘 조절하면 어느정도의 해결은 되지만 완전한 해결방식은 아니고 언제까지나 “기대사항” 정도 밖에 되지 않기 때문에 이 문제를 해결할 수 있는 방법을 제안하게 됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;다양한-gradient-descent-방식&quot;&gt;다양한 Gradient Descent 방식&lt;/h3&gt;
+
+&lt;h4 id=&quot;sgd&quot;&gt;SGD&lt;/h4&gt;
+
+&lt;p&gt;SGD는 Stochastic Gradient Descent의 약자입니다.
+Stochastic은 “확률적”이라는 의미입니다. &lt;del&gt;어딘가 믿음직스럽지 않은 이름이네요.&lt;/del&gt; 대체 어디가 확률적이라는걸까요?&lt;/p&gt;
+
+&lt;p&gt;기존의 GD는 전체 데이터를 기반으로 학습을 진행했습니다. 위에서 본 것처럼 GD의 문제점이 발생합니다. 그러한 문제점을 극복하기 위해서 SGD가 개발되었습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;전체 데이터가 포함한 부분집합을 학습하면 대체적으로 최소 $Loss$를 얻을 경사 주변에서 학습되지 않을까?&lt;/strong&gt; 정도의 개념으로 발전하게 된 학습이 아닐까 생각됩니다.&lt;/p&gt;
+
+&lt;p&gt;저는 데이터를 경향으로 말합니다. 그리고 예측은 경향을 알아보는 것으로 말합니다.&lt;/p&gt;
+
+&lt;p&gt;모든 데이터가 어떠한 큰 경향을 띄고 있다면 대체적으로 부분집합 또한 그 경향을 띌 것이고, 학습이 진행되면서 그 경향성이 조금씩 진해 질 것이라고 가정합니다.&lt;/p&gt;
+
+&lt;p&gt;굳이 그림을 그리자면 다음과 같지만, 사실 학습에 사용되는 데이터 셋이 바뀌기 때문에 분포또한 달라지게 되고 그래프도 달라지게 되서 다음의 그림과는 조금 다릅니다만 대체적으로 좋은 결과로 이동합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/gradient5.png&quot; width=&quot;470&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;일반적인 Gradient Descent와 비교하면 다음과 같은 그림이 나온다고 합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/gradient6.png&quot; width=&quot;470&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;SGD는 Batch Size만큼의 데이터 셋을 임의로 분할해서 학습하는 방식으로 처음에는 Gradient가 통통 튀기 시작하지만 점차 수렴해나가는 모습을 보여줍니다.&lt;/p&gt;
+
+&lt;p&gt;기존의 GD보다는 연산이 많이 수행되기 때문에 학습 시간이 오래 걸리는 문제도 있습니다만, 지역 최소점을 피할 확률이 높습니다.&lt;/p&gt;
+
+&lt;p&gt;이 후의 방법론은 모두 SGD를 기본으로 사용하며 Learning Rate 계산을 조금 수정하여 더욱 좋은 성능을 얻고자 하는 알고리즘들입니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;momentum&quot;&gt;Momentum&lt;/h4&gt;
+
+&lt;p&gt;조금 더 발전시킨 방법으로 Momentum을 사용 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;지역 최소점에 왜 걸리게 될까?&lt;/strong&gt; 를 고민하던 사람들은 곧 Gradient만으로 이동 거리를 계산하기에는 한계가 있다는 생각을 하게 됩니다. 그래서 &lt;strong&gt;가던 방향으로 조금 더 이동시켜보면 어떨까?&lt;/strong&gt;라는 생각을 하게 됩니다. Gradient와 Learning Rate외에 이동 할 수 있는 파라미터를 하나 추가하게되죠.&lt;/p&gt;
+
+&lt;p&gt;바로 관성계수 $m$입니다.&lt;/p&gt;
+
+\[V_t​=m×V_{t−1}​−\eta\nabla_ω​J(ω_t​)\]
+
+\[ω_{t+1}​=ω_t​+V_t​\]
+
+&lt;p&gt;간단히 설명하면 처음 학습은 $V_{t}$는 0이기 때문에 GD와 똑같이 기울기와 Learning Rate의 곱 만큼 학습됩니다. 그 이후 $m$과 $V$의 곱에서 학습 계수만큼 뺀 값만큼 학습이 진행되면서 우리가 말하는 &lt;strong&gt;경사를 빠르게 내려오게 됩니다.&lt;/strong&gt; 즉 수렴속도가 빨라지며, 지역 최소점이 낮은 경사를 이루고 있다면 그 언덕을 넘어 갈 수도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 하면 지역 최소점을 넘어 갈 수도 있고, 경사가 0에 가까운 상황에서도 학습이 진행되어 평평한 Gradient에 걸릴 경우도 넘어 갈 수 있습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;adagrad&quot;&gt;Adagrad&lt;/h4&gt;
+
+&lt;p&gt;또 다른 방법으로 가중치마다 움직이는 정도를 조절해버리자는 생각에도 도달하게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;이미 많은 학습이 진행 된 가중치는 작게 학습하여 수렴하도록하고 적게 학습 된 가중치는 크게 학습하여 지역 최소점을 벗어나 좋은 Gradient를 찾자&lt;/strong&gt; 라고 말해보겠습니다.&lt;/p&gt;
+
+\[G_t​=G_{t−1}​+(\nabla_ω​J(ω_t​))^2=\sum_{i=1}^k​\nabla_{ω_i}​​J(ω_i​)\]
+
+\[ω_{t+1}​=ω_t​−\frac{\eta}{\sqrt{G_t}​+ϵ}​⋅\nabla_ω​J(ω_t​)\]
+
+&lt;p&gt;위 식에서 $G_t$는 이전 이동까지 사용했던 기울기 값($G_{t-1}$)의 제곱의 합에서 현재 기울기 값의 제곱을 더해줍니다. 결국 &lt;strong&gt;현재까지 이동했던 거리&lt;/strong&gt;를 말합니다.&lt;/p&gt;
+
+&lt;p&gt;그리고 현재까지 이동했던 거리가 커질수록 Learning Rate는 점점 작아지기 때문에 학습은 조금씩 진행됩니다.&lt;/p&gt;
+
+&lt;p&gt;처음 이동 거리는 0이기 때문에 zero division 문제를 방지하기 위해서 $\epsilon$을 매우 작은 수로 설정하여 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;이러한 방식에 문제가 아예 없는 것은 아닙니다. 학습이 진행 될 수록 $G_t$는 커지게 되고 Learning Rate가 0으로 수렴하게 되면서 점차 아예 학습이 진행되지 않을 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;그렇게 RMSProp이 등장하게 되었습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;rmsprop&quot;&gt;RMSProp&lt;/h4&gt;
+
+&lt;p&gt;RMSProp은 Adagrad에서 &lt;strong&gt;이동 거리를 계산하는 과정을 조절&lt;/strong&gt;합니다.&lt;/p&gt;
+
+\[0 \leq \gamma \leq 1\]
+
+\[G_t​=\gamma G_{t−1}​+(1-\gamma)(\nabla_ω​J(ω_t​))^2\]
+
+\[ω_{t+1}​=ω_t​−\frac{\eta}{\sqrt{G_t}​+ϵ}​⋅\nabla_ω​J(ω_t​)\]
+
+&lt;p&gt;$G_t$를 계산하는 과정만이 바뀐 사실을 알 수 있습니다. 일반적으로 $\gamma$
+는 0.9이상의 값이 주로 사용되며, 이동거리 자체를 스케일링하여 학습이 0으로 수렴하는 것을 어느정도 방지 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;Learning Rate가 0으로 수렴할 정도로 $G_t$가 커지면 1보다 작은 값으로 곱하면서 일정 수준 이상으로 커지는 것을 방지합니다. 심지어 이동거리를 더하는 과정에서도 1보다 작은 값이 곱해지며 $G_t$의 커짐을 방지합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;adam&quot;&gt;Adam&lt;/h4&gt;
+
+&lt;p&gt;여기에 Momentum을 추가하면 어떨까요?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;총 이동거리에 반비례해서 천천히 움직이면서 Gradient가 0에 가까워도 학습을 더 진행 할 수 있는 방식이 Adam입니다.&lt;/strong&gt;&lt;/p&gt;
+
+\[m_t​=\beta_1​m_{t−1}​+(1−\beta_1​)\nabla_ω​J(ω_t​)\]
+
+\[V_t​=\beta_2​m_{t−1}​+(1−\beta_2​)(\nabla_ω​J(ω_t​))^2\]
+
+\[ω_{t+1}​=ω_t​−m_t\frac{\eta}{​V_t​+\epsilon}​\]
+
+&lt;p&gt;처음으로 설명 할 것은 단연 관성계수인 $m$입니다.
+Momentum에서 사용했던 방식과 마찬가지로 기울기 값을 일정 수준 더해주는 과정을 거침으로써 &lt;strong&gt;같은 방향으로 학습 할 때 커지는 관성을 표현&lt;/strong&gt;해줍니다.&lt;/p&gt;
+
+&lt;p&gt;그 후 &lt;strong&gt;관성계수를 현재 이동 거리로 가정하고 RMSProp을 적용해줍니다.&lt;/strong&gt;
+기존의 기울기를 관성계수로 치환하고 Learning Rate를 $V_t$를 이용하여 반비례하게 정의해주면 다음 가중치는 &lt;strong&gt;관성의 성질을 가지지만 학습이 진행되면서 점차 이동거리가 줄어드는&lt;/strong&gt; 바람직한(?) 학습이 진행됩니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;참고&quot;&gt;참고&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://twinw.tistory.com/247&quot;&gt;https://twinw.tistory.com/247&lt;/a&gt;
+&lt;a href=&quot;https://onevision.tistory.com/entry/Optimizer-의-종류와-특성-Momentum-RMSProp-Adam&quot;&gt;https://onevision.tistory.com/entry/Optimizer-의-종류와-특성-Momentum-RMSProp-Adam&lt;/a&gt;&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="ML" /><summary type="html">Gradient에 대해서</summary></entry><entry><title type="html">편향과 분산</title><link href="http://localhost:4000/posts/%ED%8E%B8%ED%96%A5%EA%B3%BC-%EB%B6%84%EC%82%B0/" rel="alternate" type="text/html" title="편향과 분산" /><published>2021-09-03T21:05:23+09:00</published><updated>2021-09-03T21:05:23+09:00</updated><id>http://localhost:4000/posts/%ED%8E%B8%ED%96%A5%EA%B3%BC-%EB%B6%84%EC%82%B0</id><content type="html" xml:base="http://localhost:4000/posts/%ED%8E%B8%ED%96%A5%EA%B3%BC-%EB%B6%84%EC%82%B0/">&lt;h2 id=&quot;편향과-분산에-대해서&quot;&gt;편향과 분산에 대해서&lt;/h2&gt;
+
+&lt;p&gt;인공지능 분야에서 편향이라는 단어에 이해한다고 생각했지만, 정확히 설명하기 어려운 부분이라 생각되어 정리합니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;편향--bias-&quot;&gt;편향 ( Bias )&lt;/h2&gt;
+
+&lt;p&gt;편향은 데이터 분석을 하다보면 자주 듣게 되는 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;###1. 선형회귀 식 에서의 편향 (b)&lt;/p&gt;
+
+\[Hyperthesis = xw + b\]
+
+&lt;p&gt;대체 선형회귀의 Hyperthesis에서 왜 b를 더해주는 걸까요?&lt;/p&gt;
+
+&lt;p&gt;많은 사람들이 이야기합니다.
+&lt;strong&gt;“활성화 함수를 평행이동 시킬 수 있잖아요!”&lt;/strong&gt;
+그리고 또 많은 사람들이 대답합니다.
+&lt;strong&gt;“그게 무슨 말이에요?!”&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;오늘은 이 부분을 명확하게 설명드리겠습니다.&lt;/p&gt;
+
+&lt;p&gt;왜? 우리는 분산을 사용하는지, 그리고 왜 활성화 함수를 평행이동 시키는 지 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;다음의 문제를 한 번 풀어보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Lion2me가 공부한 시간에 비해 얻은 시험 점수가 있습니다. 다음 시험에서 K시간 공부했을 때 얻을 수 있는 시험 점수를 예측해주세요.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 회귀 식을 이용한 하나의 레이어를 거친 값이 &lt;strong&gt;$X_2$ = [8.4, 7.7, 8.1]&lt;/strong&gt; 라고 가정해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;편향을 사용하지 않고 순수하게 $Y = xw$ 공식만을 사용했다고 가정합니다.&lt;/p&gt;
+
+\[NextLayerinput = Sigmoid(wx)\]
+
+&lt;p&gt;다음 레이어에 전달되는 input은 위와 같습니다.&lt;/p&gt;
+
+&lt;p&gt;그럼 $Sigmoid(X_2)$는 얼마일까요?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;$Sigmoid(X_2)$ = [0.9997,0.9995,0.9998]&lt;/strong&gt; 입니다.
+Sigmoid의 특성 상 숫자가 커지면 1에 수렴하고 작으면 0으로 수렴합니다.
+그리고 수렴 할 수록 기울기는 점차 줄어들며 분석하기에 유의미하지 않는 차이를 만들 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;####만약 편향을 사용하면 어떻게 될까요?&lt;/p&gt;
+
+\[NextLayerinput = Sigmoid(wx+b)\]
+
+&lt;p&gt;위의 식을 다음 레이어의 input으로 보내고 b를 평균의 음수인 -8로 가정하겠습니다. 그러면 &lt;strong&gt;$X_2$ = [8.4 - 8 , 7.7 - 8 , 8.1 - 8]&lt;/strong&gt; 로 표현하겠습니다.&lt;/p&gt;
+
+\[NextLayerinput = Sigmoid(wx-8)\]
+
+&lt;p&gt;&lt;strong&gt;$Sigmoid(X_2)$ = [0.5986,0.4255,0.5249]&lt;/strong&gt; 입니다.&lt;/p&gt;
+
+&lt;p&gt;다음 레이어에서 구별 할 수 있을 정도의 값이 등장했습니다.
+편차를 사용하지 않을 경우 0.0003 정도의 차이를 가지고 있던 값들은 0.1정도의 유의미한 격차로 표현됩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;이것이 바로 활성화 함수를 평행이동 시키는 것입니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;다음의 그림을 확인하면 기존의 활성화 함수( 파란색 )을 평행이동한 경우 동일한 값도 해당 값을 정확히 알 수 있음을 확인 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/bias1.png&quot; width=&quot;500&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;###2. 머신러닝 에러 측면의 편향 (Bias)&lt;/p&gt;
+
+&lt;p&gt;정확히 말하면 모델 평가 측면에서의 Bias라고 하는게 맞을 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;단! 활성화 함수가 없는 단순 선형회귀 (예시로 1계층 회귀 레이어)의 경우에는 위에서 다룬 편차(b)가 에러 측면의 편향과 상관성이 있는 것 같습니다.&lt;/del&gt;&lt;/p&gt;
+
+&lt;p&gt;모델의 결과를 보면 편향과 분산을 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;편향은 예측 값에서 실제 값을 뺀 값의 평균이라고 요약 할 수 있습니다.
+&lt;strong&gt;평균적으로 예측 값과 실제 값이 얼마나 떨어져있는가?&lt;/strong&gt; 라고 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;분산은 예측 값들이 서로 얼마나 넓게 분포되어 있는지에 대한 값이라고 요약 할 수 있습니다.
+분포가 넓을수록 분산은 크다고 말합니다.
+&lt;strong&gt;예측 값들 사이가 얼마나 넓게 분포되어 있는가?&lt;/strong&gt; 라고 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;이 중에서 편향이 크다는 이야기는 대체적으로 &lt;strong&gt;모델이 간단하다 혹은 학습이 제대로 진행되지 않았다(Under Fitting)&lt;/strong&gt; 고 말 할 수 있습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;왜-학습이-잘-되지-않으면-편향이-커질까&quot;&gt;왜 학습이 잘 되지 않으면? 편향이 커질까?&lt;/h4&gt;
+
+&lt;p&gt;두 예측 그래프를 보고 편향과 분산에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/bias2.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;
+&lt;img src=&quot;/public/img/bias3.png&quot; width=&quot;400&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;모델 평가에서의 편향은 $(E[\hat{f}(x)]-\bar{f}(x))^2$로 나타 낼 수 있습니다. &lt;strong&gt;“실제값이 평균에서 얼마나 멀리 떨어져있는가”&lt;/strong&gt; 로 요약 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;학습이 잘 되지 않은 것은 곧 &lt;strong&gt;에러가 크다는 것&lt;/strong&gt;이며 &lt;strong&gt;예측값의 평균과 실제 값의 거리가 크다&lt;/strong&gt;는 이야기입니다. 또한 모델이 단순하여 유연한 형태의 분류를 할 수 없다는 것을 예상 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;위의 1번 그래프를 보면 학습이 제대로 되지 않은 Under Fitting 상태임을 알 수 있습니다. 얼핏 보면 특정 데이터에는 잘 학습 된 것 같지만 MSE를 사용하여 모델을 학습 한다는 가정을 하면 Loss는 제곱을 기반으로 학습되기 때문에 Error는 급격하게 커집니다.&lt;/p&gt;
+
+&lt;p&gt;이 그래프에서 편향은 파란선 길이의 제곱의 합이라고 생각 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;학습이 진행 될 수록 그래프는 점차 제곱의 합이 작아지는 방향으로 수정됩니다. 가능한 에러가 적은 방향으로 학습이 진행되니까요.&lt;/p&gt;
+
+&lt;p&gt;반대의 경우 Over Fitting일 때를 알아봅시다.&lt;/p&gt;
+
+&lt;p&gt;그래프 2번을 보면 매우 유연한 모델의 결과를 보실 수 있습니다. 모든 예측값은 정확히 실제 값을 지나며 N 차원의 그래프를 보이고 있습니다.
+&lt;strong&gt;즉 에러는 0입니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이 경우 편향은 가장 최선의 값이 됩니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;분산은-왜-학습이-잘-될-수록-커질까&quot;&gt;분산은 왜 학습이 잘 될 수록 커질까?&lt;/h4&gt;
+
+&lt;p&gt;하지만 분산은 반대입니다.
+학습이 잘 될 수록 높은 분산을 갖게되죠.&lt;/p&gt;
+
+&lt;p&gt;분산을 구하는 식은 $(\hat{f}(x) - E[\hat{f}(x)])^2$입니다. &lt;strong&gt;예측값의 평균에서 예측값은 얼마나 멀리 떨어져있는가? 멀리 분포되어 있는가?&lt;/strong&gt; 라고 말하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;다음의 그래프는 분산 그래프입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/bias4.png&quot; width=&quot;500&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Under Fitting일 경우에는 그래프 1과 같이 예측값과 예측값의 평균이 상대적으로 작을 가능성이 큽니다. 왜냐하면 모델 자체가 유연하지 않기 때문에 데이터의 값에 크게 변형되지 않고 변화가 일정한 편이니까요.&lt;/p&gt;
+
+&lt;p&gt;하지만 Over Fitting의 경우에는 모든 예측값이 실제 값과 거의 일치하게 됩니다. 그 결과 모델은 복잡해지고, 데이터에 따라 큰 변화량을 갖게 되어 예측값이 크게 차이가 생깁니다. 위의 두 그림으로 간단하게 알아 볼 수 있을 것 같습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;편향과-분산은-trade-off-관계이다&quot;&gt;편향과 분산은 Trade-Off 관계이다.&lt;/h4&gt;
+
+&lt;p&gt;Under Fitting 일 수록 편향은 커지고 분산은 작아집니다.
+Over Fitting 일 수록 편향을 작아지고 분산은 커집니다.
+두 지표 모두 작으면 작을수록 좋은 지표이지만, 둘 다 완벽한 모델을 만드는 것은 불가능에 가까우니 우리는 선택을 해야합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;어느 지점에서 만족할것인가&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;우리는 Over Fitting을 두려워하며 Under Fitting을 벗어나는 방법을 찾아서 이러한 Trade-Off 관계에서 &lt;strong&gt;그나마 최선의 결과&lt;/strong&gt;를 도출해야 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;참고자료&quot;&gt;참고자료&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://opentutorials.org/module/3653/22071&quot;&gt;https://opentutorials.org/module/3653/22071&lt;/a&gt;&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="ML" /><summary type="html">편향과 분산에 대해서</summary></entry><entry><title type="html">Thread에 대하여</title><link href="http://localhost:4000/posts/Thread%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/" rel="alternate" type="text/html" title="Thread에 대하여" /><published>2021-09-03T21:05:23+09:00</published><updated>2021-09-03T21:05:23+09:00</updated><id>http://localhost:4000/posts/Thread%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C</id><content type="html" xml:base="http://localhost:4000/posts/Thread%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C/">&lt;h2 id=&quot;thread에-대해서&quot;&gt;Thread에 대해서&lt;/h2&gt;
+
+&lt;p&gt;Thread 관련 내용을 긴장한채로 질문 받았을 때 제대로 답변을 하지 못했기에 다시 정리하기위해 정리합니다.&lt;/p&gt;
+
+&lt;p&gt;가장 먼저 Thread가 어떤 것인지 알아보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;process&quot;&gt;Process&lt;/h3&gt;
+
+&lt;p&gt;Thread를 알기 위해서는 Process에 대한 지식이 선행되어야 합니다.&lt;/p&gt;
+
+&lt;p&gt;프로그램을 실행하기 위해서는 프로그램을 메모리에 적재 할 필요가 있습니다.
+이유는 I/O 속도 때문입니다!
+조금만 더 제대로 설명드리면 프로그램이 실행되기 위해서는 해당 프로그램의 데이터를 불러와야 합니다. 컴퓨터에는 데이터를 저장 할 수 있는 공간은 크게 4개로 나뉩니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;레지스터 / 캐시 / 메모리(RAM) / 디스크&lt;/strong&gt; 이렇게 크게 4가지로 왼쪽에 있는 것부터 점차 느려지는 성격이 있으며 동시에 용량이 커지는 성격이 있다고 생각하시면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;디스크에 2TB의 파일을 저장하지만, 속도가 너무 느리기 때문에 프로그램을 실행시키기에는 성능상의 문제가 극심합니다.
+반대로 캐시에 저장하고 프로그램을 실행시키기에는 nMB 정도의 작은 공간에 담기에는 프로그램이 너무 큽니다.&lt;/p&gt;
+
+&lt;p&gt;중간 지점이 &lt;strong&gt;메모리&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;p&gt;요즘 메모리(RAM)은 16GB가 넘는 기기가 출시 될 정도로 용량이 충분하며 속도도 디스크보다 훨씬 빠릅니다. 이러한 이유로 우리는 프로그램을 실행하기 위해 메모리에 적재하는 방식을 사용합니다.&lt;/p&gt;
+
+&lt;p&gt;16GB도 최근 프로그램의 높은 용량을 실행시킬 수 없다고 생각하실수도 있지만, 이 내용은 이후에 포스팅하도록 하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;즉 Process는 프로그램의 인스턴스 정도로 생각 할 수 있습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;thread&quot;&gt;Thread&lt;/h3&gt;
+
+&lt;p&gt;Process가 CPU를 할당받고 실행됩니다. 그리고 &lt;strong&gt;Process 내의 Thread가 프로그램이 원하는 작업을 수행&lt;/strong&gt;합니다. 하지만 하나의 작업에 모든 CPU자원을 사용한다면 CPU가 얼마나 사용될까요?&lt;/p&gt;
+
+&lt;p&gt;CPU는 생각보다 높은 성능을 가지고 있기 때문에 특정 작업이 아닌 대부분의 작업에 사용하는 되는 동안 CPU 활용도는 정말 낮습니다. 어차피 노는 CPU를 최대한 효율적으로 사용하고자 두 가지 방법을 생각해냅니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Multi Process&lt;/strong&gt; 와 &lt;strong&gt;Multi Thread&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;multi-process&quot;&gt;Multi Process&lt;/h4&gt;
+
+&lt;p&gt;Multi Process는 한 프로그램 실행에 대해서 2개 이상의 프로세스를 이용하는 방식입니다. 정확히 이 방식을 자주 사용하지는 않습니다만, 제가 가끔하는 게임인 &lt;strong&gt;리그오브레전드&lt;/strong&gt;의 로비 창 프로세스와 게임 플레이 프로세스의 구분이 이러한 Multi Process로 추정됩니다.&lt;/p&gt;
+
+&lt;p&gt;Process의 메모리 구조는 다음의 &lt;a href=&quot;https://lion2me.github.io/basic/2021/07/12/메모리-영역에-대하여.html&quot;&gt;블로그&lt;/a&gt;를 통해 정리했습니다.&lt;/p&gt;
+
+&lt;p&gt;프로세스별로 각 메모리 공간을 할당받기 때문에 메모리의 낭비가 클 수 있습니다. 주로 이런 문제로 우리는 &lt;strong&gt;Multi Thread&lt;/strong&gt; 방식을 사용합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;multi-thread&quot;&gt;Multi Thread&lt;/h4&gt;
+
+&lt;p&gt;Thread는 Process 내에서 동작을 수행하는 단위이므로, Process에 포함 된 개념이라고 생각 할 수 있습니다. 그리고 여러 개의 Thread를 사용하는 Multi Thread는 결국 하나의 Process가 실행하면서 여러 개의 Thread를 사용하여 CPU의 활용을 최대화한다. 정도로 이해 할 수 있을 것 같습니다.&lt;/p&gt;
+
+&lt;p&gt;Multi Thread의 특징으로는&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 한 프로세스의 스택을 제외 한 모든 영역을 공유해서 사용합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 그렇기 때문에 공유하는 영역에 접근 할 때 여러 Thread가 동시에 접근 할 수 있는 문제가 발생합니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 그럼에도 메모리가 효율적이고 여러 동작을 동시에 수행 할 수 있게 하기에 자주 사용됩니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;여러 작업을 동시에 수행 할 수 있는 만큼 Multi Thread를 사용 할 때 주의 할 점이 있습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;1. 동기화에 주의해야 한다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;2. 동기화에 주의해야 한다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;3. 동기화에 주의해야 한다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;중요해서 3번 적었습니다. 발생 할 수 있는 문제 중 심각한 문제를 꼽자면
+&lt;strong&gt;한 자원에 두 개 이상의 Thread가 동시에 접근함으로써 원치 않은 결과가 발생하는 문제&lt;/strong&gt; 정도로 말 할 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;예를 들면 두 Thread가 각각 &lt;strong&gt;5를 더한다&lt;/strong&gt;/&lt;strong&gt;10을 뺀다&lt;/strong&gt; 의 동작을 수행 할 때 &lt;strong&gt;20 의 값을 가지고 동작을 수행한다면&lt;/strong&gt; 결과는 &lt;strong&gt;15&lt;/strong&gt;가 나와야 합니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 두 Thread가 동시에 &lt;strong&gt;Read 20&lt;/strong&gt;을 수행하고 &lt;strong&gt;A Thread가 5를 더하고, B Thread가 10을 빼버린다면? 결과는 25아니면 10이 나올 수 있겠네요.&lt;/strong&gt; 즉 접근하는 시점과 동작 수행 시점이 겹칠 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이런 문제가 Multi Thread에서 일어 날 수 있는 문제입니다. 이 문제를 해결 할 수 있는 방법으로는 강조했던 &lt;strong&gt;동기화&lt;/strong&gt;가 필요합니다.&lt;/p&gt;
+
+&lt;p&gt;이렇게 작업에 대해 동기화가 잘 이뤄지는 것이 바로 &lt;strong&gt;Thread가 Safe한 상태&lt;/strong&gt;라고 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;참고&quot;&gt;참고&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@cateto/Java-Thread-Safe란&quot;&gt;https://velog.io/@cateto/Java-Thread-Safe란&lt;/a&gt;&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="Basic" /><summary type="html">Thread에 대해서</summary></entry><entry><title type="html">ORM과 SQLMapper</title><link href="http://localhost:4000/posts/ORM%EA%B3%BC-SQLMapper/" rel="alternate" type="text/html" title="ORM과 SQLMapper" /><published>2021-08-20T21:05:23+09:00</published><updated>2021-08-20T21:05:23+09:00</updated><id>http://localhost:4000/posts/ORM%EA%B3%BC-SQLMapper</id><content type="html" xml:base="http://localhost:4000/posts/ORM%EA%B3%BC-SQLMapper/">&lt;h2 id=&quot;orm과-sqlmapping&quot;&gt;ORM과 SQLMapping&lt;/h2&gt;
+
+&lt;p&gt;JAVA 기반 웹 애플리케이션을 구현하면서 RDBMS에 접근하기 위해 필수적으로 사용해야 하는 JDBC에 대해서는 이전에 간단히 포스팅을 했었습니다. 그 내용이 너무 적고, 추가적으로 JPA와 MyBatis 같은 Spring에서 JDBC를 쉽게 사용하는 방법에 대해 공부해보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;jdbc-java-database-connectivity-란&quot;&gt;JDBC (JAVA DataBase Connectivity) 란?&lt;/h3&gt;
+
+&lt;p&gt;JDBC는 자바와 데이터베이스를 연결하기 위한 API입니다. 또한 연결 된 데이터베이스에서 원하는 정보를 CRUD 작업을 수행할 수 있습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;단점&quot;&gt;단점&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;쿼리를 실행하기 전후에 많은 코드를 실행해야합니다.&lt;/li&gt;
+  &lt;li&gt;트랜잭션 관리를 해야합니다.&lt;/li&gt;
+  &lt;li&gt;예외 처리에 대한 어려움이 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;spring-jdbc는&quot;&gt;Spring JDBC는?&lt;/h3&gt;
+
+&lt;p&gt;Spring에서 지원해주는 JDBC는 이러한 JDBC의 사용을 편리하게 바꾸어 제공합니다.&lt;/p&gt;
+
+&lt;p&gt;기존의 JDBC는 트랜잭션 관리를 직접해야하고 예외처리에 관한 처리도 해야 합니다. 또한 불필요한 반복이 많습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 Spring JDBC는 이러한 관리는 알아서 해주며, 불필요한 반복이 일어나는 단점도 해결한 형태입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;persistence-framework&quot;&gt;Persistence Framework&lt;/h3&gt;
+
+&lt;h4 id=&quot;영속화persist&quot;&gt;영속화(persist)&lt;/h4&gt;
+
+&lt;p&gt;데이터를 다루기 위해 불러오고 수정하는 과정을 거치더라도 이 과정은 메모리 위에서 일어나는 일이기에 프로그램을 종료하거나 다른 데이터가 덮어씌워지면 기존에 있던 데이터는 사라지게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;그래서 우리는 데이터를 저장하기 위해 특정 공간(파일이나 데이터베이스 등)로 저장한 뒤 후에 그 값을 읽어들이는 방법을 사용하고 있습니다. 이러한 과정을 영속화라고 합니다. 즉 영구적으로 데이터를 저장하는 것입니다.&lt;/p&gt;
+
+&lt;p&gt;우리는 데이터를 영속화하는 방법 중 데이터베이스를 이용하려하고, 자바 언어를 기반으로 데이터베이스에 접근하는 것은 JDBC를 이용해야 합니다. 직접 JDBC를 사용할 수 있으며, 그보다 조금 더 편하게 이용할 수 있는 Spring이 제공하는 Spring JDBC또한 사용할 수 있지만, 아예 영속화를 도와주는 프레임워크가 주로 사용됩니다.&lt;/p&gt;
+
+&lt;p&gt;그것이 &lt;strong&gt;Persistence Framework&lt;/strong&gt;입니다. 대표적으로는 &lt;strong&gt;ORM 방식과 SQL Mapper 방식&lt;/strong&gt;이 있습니다. 이 두 가지에 대해 알아보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;orm&quot;&gt;ORM&lt;/h3&gt;
+
+&lt;p&gt;그럼 ORM에 대해서 공부해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;ORM은 Object Relational Mapping의 약자로 자바의 객체와 데이터베이스의 데이터를 Mapping 해주는 방법입니다. 그 결과로 RDBMS를 SQL문으로 다루는 것이 아닌 자바 언어로 다룸으로써 객체지향적인 구조를 활용 할 수 있게 됩니다.&lt;/p&gt;
+
+&lt;p&gt;데이터베이스의 데이터와 자바 객체에는 차이가 있습니다. 자바의 객체는 &lt;strong&gt;클래스&lt;/strong&gt;를 사용하지만 데이터베이스의 데이터는 &lt;strong&gt;테이블&lt;/strong&gt;을 사용합니다. 이로 인해 자바의 객체와 데이터베이스의 데이터는 불일치가 발생하고 이를 해결하기 위해 ORM이 등장했습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ORM은 데이터베이스의 테이블을 자바의 객체로 자동으로 매핑해줍니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;즉 객체지향적인 환경을 바탕으로 데이터베이스의 데이터에 접근 할 수 있도록 도와줍니다. ORM을 사용하는 개발자분들은 “객체지향 특징을 잘 살릴 수 있기 때문에 자바의 장점을 잘 살리려면 ORM을 쓰는게 좋다.” 라고 하셨습니다.
+&lt;del&gt;그리고 저는 SQL Mapper방식을 사용했었습니다&lt;/del&gt;
+하지만 다시 알아보니 ORM의 장점은 상당히 강력했습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;orm의-특징&quot;&gt;ORM의 특징&lt;/h4&gt;
+
+&lt;p&gt;ORM은 자바 언어를 통해 데이터베이스를 다룰 수 있는 방법이라고 간단하게 말하겠습니다.&lt;/p&gt;
+
+&lt;p&gt;기본적으로 데이터베이스에서 데이터를 다루는 방법, 정확히는 테이블 내 레코드를 다루는 작업(DML)은 SQL문을 이용해서 다루게 됩니다. 하지만 ORM은 자바 언어로 구현하면 자동으로 SQL문을 실행하여 데이터를 다루는 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;즉 SQL문을 직접 입력 할 필요가 없습니다. &lt;del&gt;이 점이 장점이라고 하시는 분이 계시지만 저는 SQL을 직접 입력하는 것이 좋은 것 같습니다.&lt;/del&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;orm의-장점&quot;&gt;ORM의 장점&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;특징에서 설명하는 SQL을 익힐 필요가 없다는 점&lt;/li&gt;
+  &lt;li&gt;객체지향적 프로그래밍 방식을 그대로 적용 할 수 있는 점 (*)&lt;/li&gt;
+  &lt;li&gt;개발 중 데이터베이스의 변화에 적응하기 편한 점&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;orm의-단점&quot;&gt;ORM의 단점&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;잘못 사용할 시 성능의 저하가 있을 수 있는 점&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;ORM 형식을 따르는 JPA를 구현한 Hibernate를 보면 영속화 컨텍스트라는 일종의 캐시? 임시 저장 공간? 정도의 개념을 두고 사용하는데 이에 대한 지식이 필요하다고 합니다. &lt;del&gt;실제로 사용 할 때 다시 한번 살펴보겠습니다.&lt;/del&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sql-mapper&quot;&gt;SQL Mapper&lt;/h3&gt;
+
+&lt;p&gt;저는 서비스를 개발 할 때 SQL Mapper 방식을 통해 서비스를 개발했습니다. 두 방식이 각각 장단점이 있고, 현재 ORM을 이용한 방식이 많이 떠오른 상태이지만 정해진 개발 환경에 따라 SQL Mapper를 사용했었습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;sql-mapper의-특징&quot;&gt;SQL Mapper의 특징&lt;/h4&gt;
+
+&lt;p&gt;간단히 “SQL문을 통해서 데이터를 불러 온 뒤 원하는 데이터 타입에 주입한다.” 정도로 이해하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;해당 RDBMS에 대한 SQL 언어를 알고 있다면 그대로 사용해서 불러온 데이터를 사용하고 싶은 데이터 형식을 통해 저장합니다. 그리고 이 과정에서 사용 한 SQL문은 자바 클래스 내에 적지 않고 xml 파일로 분리시켜서 적을 수 있습니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;sql-mapper의-장점&quot;&gt;SQL Mapper의 장점&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;xml 파일화를 통한 유지보수가 편한 점&lt;/li&gt;
+  &lt;li&gt;복잡한 쿼리가 필요 한 경우 직접 작성 할 수 있어서 수월 한 점&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;sql-mapper의-단점&quot;&gt;SQL Mapper의 단점&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;DB에 종속적인 점&lt;/li&gt;
+  &lt;li&gt;데이터베이스의 설정을 변경하면 수정할 것이 많은 점&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;SQL Mapper 방식을 사용한 것은 소스와 SQL문이 명확하게 구분되기 때문이라고 알고 있습니다만, 복잡한 쿼리가 사용되지 않은 서비스였기에 ORM 방식으로 만들어도 좋았을 것이라고 생각하고 있습니다.&lt;/p&gt;
+
+&lt;p&gt;이미 지나간 일이지만, 다른 방식으로 한 번 만들어보면 좋았을 것 같았는데..&lt;/p&gt;
+
+&lt;h3 id=&quot;참조&quot;&gt;참조&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://eun-jeong.tistory.com/31&quot;&gt;https://eun-jeong.tistory.com/31&lt;/a&gt;
+&lt;a href=&quot;https://velog.io/@mu1616/ORM-SQL-Mapper-차이&quot;&gt;https://velog.io/@mu1616/ORM-SQL-Mapper-차이&lt;/a&gt;&lt;/p&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="Spring" /><summary type="html">ORM과 SQLMapping</summary></entry><entry><title type="html">강화학습의 시작</title><link href="http://localhost:4000/posts/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%EC%9D%B4%EB%9E%80/" rel="alternate" type="text/html" title="강화학습의 시작" /><published>2021-08-17T21:05:23+09:00</published><updated>2021-08-17T21:05:23+09:00</updated><id>http://localhost:4000/posts/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%EC%9D%B4%EB%9E%80</id><content type="html" xml:base="http://localhost:4000/posts/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5%EC%9D%B4%EB%9E%80/">&lt;h2 id=&quot;강화학습의-시작&quot;&gt;강화학습의 시작&lt;/h2&gt;
+
+&lt;p&gt;좋은 기회를 통해 강화학습에 대한 기초를 공부하게 되어 블로그에 남깁니다.&lt;/p&gt;
+
+&lt;p&gt;강화학습은 흔히 말하는 AI 스스로 판단하여 가장 좋은 방법을 찾아나가는 진정한 의미의 인공지능이라고 볼 수 있는 기술입니다. 여기까지 말하면 터미네이터와 같은 공상 영화의 한 장면을 연상할 수 있지만 사실은 최고의 효율을 얻기 위한 &lt;strong&gt;시도&lt;/strong&gt;를 통해 다음 &lt;strong&gt;행동&lt;/strong&gt;을 판단하는 하나의 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;대부분의 강화학습은 MDP(Marcov Dicision Process)를 이용합니다. 어렵게 생각할 수 있지만 &lt;strong&gt;이전 상태가 다음 상태에 영향을 준다&lt;/strong&gt;라고 이해하면 될 것 같습니다. 이전에 포스팅한 &lt;strong&gt;Marcov Model&lt;/strong&gt;과 비슷합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/강화1.png&quot; width=&quot;1000&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;위의 그림은 cs285 강의에서 참고해서 가져왔습니다.&lt;/p&gt;
+
+&lt;p&gt;그림에는 총 3개의 파라미터가 있습니다. 상태 $s$와 행동 $a$ 그리고 관측 값인 $o$ 입니다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;화살표가 가리키는 대로 $a$와 $s$를 공식으로 표현해보면 $\pi_\theta(a_t&lt;/td&gt;
+      &lt;td&gt;o_t)$ $p(s_{t+1}&lt;/td&gt;
+      &lt;td&gt;a_t,s_t)$ 이렇게 표현할 수 있습니다. Marcov Process의 특성 상 확률로 표현되어 있으며 어렵게 느껴지겠지만, &lt;strong&gt;$a_t$는 $o_t$의 영향을 받는다. $s_{t+1}$은 $s_t$와 $a_t$의 영향을 받는다.&lt;/strong&gt; 정도로만 이해해보죠.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;그런데 관측 값의 경우에는 어떻게 표현할 수 있을까요? 관측 값은 어디까지나 상태 $s$에서 관측 된 정보입니다. 즉 상태 $s$에서 관측 된 값이므로 $s$의 영향을 받습니다. 그렇다면 $\pi_\theta(a_t&lt;/td&gt;
+      &lt;td&gt;o_t)$를 $\pi_\theta(a_t&lt;/td&gt;
+      &lt;td&gt;s_t)$라고 표현 할 수 있지 않을까요? 어차피 $o_t$가 $s_t$로 표현 될 수 있으니 말이죠. 관측 값이 아예 없다면 문제가 되겠지만, 현재 상태의 관측 값이 없다면 어떻게 될까요? &lt;del&gt;학습이 끝날지 탐험을 할 지 조금 더 공부해보겠습니다.&lt;/del&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;여기서 의문이 생깁니다. 그러면 $s_{t+1}$의 확률은 $s_{0 … t}$와 $a_{0 … t}$ 모두의 영향을 받는 걸까요? 맞는 말입니다만, 공식이 $p(s_{t+1}&lt;/td&gt;
+      &lt;td&gt;s_t,s_{t-1} … s_{0})$ 이런식으로 전개되지 않습니다. &lt;strong&gt;왜냐하면 $p(s_{t})$는 $s_0$부터 $s_{t-1}$까지의 특징을 가지고 있음을 가정하기 때문입니다.&lt;/strong&gt; 그렇기 때문에 **$p(s_{t+1}&lt;/td&gt;
+      &lt;td&gt;s_t,s_{t-1},s_{t-2}…s_0 ,a_{t}…)$는 결국 $p(s_{t+1}&lt;/td&gt;
+      &lt;td&gt;s_t,a_t)$와 같습니다.** 이 점은 중요한 특징이기에 기억해주시길 바랍니다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;다시 그림을 보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/강화2.png&quot; width=&quot;800&quot; height=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;우리는 여기서 [행동에 대한] 학습 정책(Policy) 와 상태의 전이(Transition)를 따로 표현해보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;policy&quot;&gt;Policy&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$policy = \pi_\theta(a_t&lt;/td&gt;
+      &lt;td&gt;s_t)$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Policy는 상태 $s_t$에서 행동 $a_t$를 수행 할 확률입니다. 정확히는 상태 $s_t$에서 어떠한 행동($a_t$)을 할 것인지 정하는 것 입니다.&lt;/p&gt;
+
+&lt;p&gt;그리고 우리가 찾고 싶은 값 또한 이 Policy입니다. 이 부분의 이해는 간단한 예시만으로도 이해하기 쉬운데, &lt;strong&gt;우리는 A라는 상황에서 어떤 행동을 할 것인지를 알고 싶습니다.&lt;/strong&gt; 예를 들면 리그오브레전드에서 한타가 일어났을 때 현재 상황($s$)에서 어떤 스킬($a$)을 사용 할건지 알고 싶습니다. 현재 상황이 $s_t$라면 스킬(행동) $a_t$을 수행하는 것에 대해 알고 싶은거죠. 그래서 우리는 Policy를 알아내야 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;transition&quot;&gt;Transition&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;$transition = p(s_{t+1}&lt;/td&gt;
+      &lt;td&gt;s_t,a_t)$&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;상태 $s_t$에서 액션 $a_t$를 수행하여 상태 $s_{t+1}$로 전이 될 확률입니다. $s_t$와 $a_t$를 알고있다면 $s_{t+1}$은 하나의 환경입니다. 상수와 같이 고정적이라고 할 수 있을 것 같습니다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;강화학습의-목표&quot;&gt;강화학습의 목표&lt;/h2&gt;
+
+&lt;p&gt;강화학습의 목표는 너무나 명확합니다. 바로 &lt;strong&gt;Maximum Reward&lt;/strong&gt; 입니다. 더 정확히 말하면 &lt;strong&gt;Reward의 합의 최대&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;p&gt;우리는 하나의 상태에서 어떠한 행동을 할 지 정하고 행동하여 다음 상태의 정보를 얻습니다. 그 과정에서 우리는 상태 혹은 다음 행동으로부터 얻을 수 있는 Reward를 알 수 있습니다. 그 Reward의 합이 가장 큰 Path를 찾아가면 우리는 정답에 가까운 Path를 알 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;하지만 명확한 행동이 정의되지 않는 문제도 있습니다. 예를 들면 몬스터와의 접촉을 회피하는 문제는 어떨까요? 만약 0도부터 180도까지의 회전 각도 중 화면상의 모든 몬스터의 접촉을 피하기 위한 최선의 각도와 이동 거리를 구하는 문제라면?&lt;/p&gt;
+
+&lt;p&gt;우리는 회전 각도를 0도부터 180도까지 n도를 기준으로 세분화하지 않았습니다. 그렇기 때문에 문제는 &lt;strong&gt;이산확률이 아닌 연속확률 문제가 되어버렸죠.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;행동의 개념이 &lt;strong&gt;연속확률&lt;/strong&gt;로 변해버린 이상 우리는 1번 액션, 2번 액션이 아닌 연속확률분포상의 특정 지점의 가능성을 구해야합니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;9.3도(현재 각도)에서 11.6도 회전하고 20.8cm(현재 위치)에서 22.1cm까지 이동했을 경우의 최대 Reward&lt;/strong&gt;를 구하는 문제는 어떨까요? 상태(9.3도)와 액션에 따른 Reward를 구하는 과정은 명확하네요.&lt;/p&gt;
+
+&lt;p&gt;이렇듯 우리는 Policy에 따라 학습을 진행하며 Transition에 따라 상태는 변화합니다. 이 방식을 바탕으로 강화학습의 종류에 대해 공부해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;강화학습은 크게 2가지로 나눌 수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;바로 &lt;strong&gt;Value Based&lt;/strong&gt; 방식과 &lt;strong&gt;Policy Based&lt;/strong&gt;입니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;value-based&quot;&gt;Value Based&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Value Based&lt;/strong&gt;는 **상태 s에서 행동 a를 시행했을 때의 결과(Reward)를 $r(a_t&lt;/td&gt;
+      &lt;td&gt;s_t)$ 값으로 저장해놓는 방법**입니다.&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Value Based에서 명심 할 점은 &lt;strong&gt;기본적으로는 Greedy한 형식을 따른다는 것&lt;/strong&gt;입니다. 그래서 가장 정답에 가까운 Path를 얻기 위해 &lt;strong&gt;기록&lt;/strong&gt;과 &lt;strong&gt;탐험&lt;/strong&gt;을 반복하며 결국에는 최선의 Path를 특정 짓습니다.&lt;/p&gt;
+
+&lt;p&gt;위의 설명에서 나오는 &lt;strong&gt;이산적인&lt;/strong&gt; 분석에서 사용 될 수 있는 방법이죠.&lt;/p&gt;
+
+&lt;p&gt;Value Based는 결국 &lt;strong&gt;현재 상태 혹은 다음 행동으로부터 얻을 수 있는 Reward의 합을 최대화하는 방법&lt;/strong&gt;입니다. 이 두 가지를 구분하여 설명해드리겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;상태-가치-함수-state-value-function&quot;&gt;상태 가치 함수 (State Value Function)&lt;/h3&gt;
+
+&lt;p&gt;상태 가치 함수는 현재 상태($s_t$)에서 기대되는 Reward의 합을 알 수 있는 방법입니다. 상태에 대해서 검증할 수 있는 방법이라고 말할 수 있겠습니다. 간단히 말하자면 가장 효과적인 방법으로 학습이 진행된다면 해당 상태에서 앞으로 진행되는 과정을 통해 얻어지는 Reward의 합은 최대가 될 것입니다.&lt;/p&gt;
+
+&lt;p&gt;$s_t$ 상태에서의 Reward의 합을 $G_t$라고 하겠습니다. 여기서 사실 $R_{t+1}$부터 시작하는 것이 좀 더 정확한 표현이지만, 식의 편의를 위해 $R_t$로 적겠습니다.&lt;/p&gt;
+
+\[G_t = R_{t} + R_{t+1} + R_{t+2} + R_{t+3} + R_{t+4} ... R_{fin}\]
+
+&lt;h3 id=&quot;행동-가치-함수-action-value-function&quot;&gt;행동 가치 함수 (Action Value Function)&lt;/h3&gt;
+
+&lt;p&gt;행동 가치 함수는 상태($s_t$)에서 행동($a_t$)을 취했을 때 기대되는 Reward의 합을 알 수 있는 방법입니다. 해당 상태에서 다음 취할 행동에 대해 검증하는 방법으로 사용 될 수 있습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;policy-based&quot;&gt;Policy Based&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Policy Based&lt;/strong&gt;의 경우에는 &lt;strong&gt;상태 s에서 행동 a를 시행하면서 얻는 Reward의 합을 최대화하게끔 $\theta$를 최적화&lt;/strong&gt;합니다.&lt;/p&gt;
+
+&lt;p&gt;[ 미완미완미완 더 추가해야합니당 ]&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML&quot;&gt;
+&lt;/script&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="ML" /><summary type="html">강화학습의 시작</summary></entry><entry><title type="html">URL에 접근 시 일어나는 Handshake</title><link href="http://localhost:4000/posts/URL%EC%9E%85%EB%A0%A5-%ED%9B%84-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-HandShake%EB%93%A4/" rel="alternate" type="text/html" title="URL에 접근 시 일어나는 Handshake" /><published>2021-07-14T21:05:23+09:00</published><updated>2021-07-14T21:05:23+09:00</updated><id>http://localhost:4000/posts/URL%EC%9E%85%EB%A0%A5-%ED%9B%84-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-HandShake%EB%93%A4</id><content type="html" xml:base="http://localhost:4000/posts/URL%EC%9E%85%EB%A0%A5-%ED%9B%84-%EC%9D%BC%EC%96%B4%EB%82%98%EB%8A%94-HandShake%EB%93%A4/">&lt;h2 id=&quot;url에-접근-시-일어나는-handshake&quot;&gt;URL에 접근 시 일어나는 Handshake&lt;/h2&gt;
+
+&lt;p&gt;URL입력 후 일어나는 일들에 대한 포스팅의 2탄입니다.&lt;/p&gt;
+
+&lt;p&gt;이전 이야기에서 TCP 통신을 진행 할 때 일어나는 TCP-Handshake와 SSL-Handshake에 대해서 언급하며 추후에 포스팅을 하겠다는 말씀을 드렸습니다. 이번에 그 Handshake에 대해서 공부해보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;handshake란&quot;&gt;Handshake란?&lt;/h3&gt;
+
+&lt;p&gt;영어로 Handshake의 뜻은 “악수”입니다. &lt;strong&gt;클라이언트와 서버가 서로에게 특정한 통신하기 전 서로를 확인하는 절차라고 말씀드릴 수 있습니다.&lt;/strong&gt; TCP-Handshake는 TCP통신 전 서로를 확인하는 작업이며, SSL-Handshake의 경우에는 클라이언트의 보안을 위해 서로를 확인하는 작업입니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;tcp-handshake&quot;&gt;TCP-Handshake&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;TCP-Handshake는 크게 2가지로 나눌 수 있습니다. 3-Way-Handshake와 4-Way-Handshake입니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;먼저 TCP 헤더에 대해서 간단히 훑어보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/tcp-header.png&quot; width=&quot;800&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;송신자 포트번호와 수신자 포트번호가 입력됩니다.&lt;/li&gt;
+  &lt;li&gt;Sequence Number는 현재 세그먼트의 시작번호(byte 단위로)로써 이 값을 이용하여 신뢰성과 흐름제어를 보장합니다.&lt;/li&gt;
+  &lt;li&gt;Acknowledgment Number는 요청에 대한 응답 시 다음 요청에서 받고 싶은 세그먼트의 시작번호를 나타냅니다. 예를 들면 Ack Number가 100이라면 Sequence Number 100의 세그먼트를 받고자 하는 것입니다.&lt;/li&gt;
+  &lt;li&gt;Offset은 실제 데이터가 어디서부터 저장되어있는지 알려주는 수 입니다. 바이트 단위로 적혀있기 때문에 4를 곱하면 현재 TCP 헤더의 전체 크기가 나옵니다. &lt;em&gt;- 추가적으로 공부한 내용으로는 이후에 나오는 Option의 크기가 가변적이기 때문에 사용한다고 합니다.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Reverse는 미래를 위해 남겨놓은 비트로 0으로 3비트가 채워져 있습니다.&lt;/li&gt;
+  &lt;li&gt;Flag는 현재 세그먼트가 어떤 속성을 갖는지 알려주는 위치 입니다. Handshake에 사용되는 Flag는 &lt;strong&gt;SYN&lt;/strong&gt;(TCP 연결 시 시퀸스 번호와 동기화 Flag),&lt;strong&gt;ACK&lt;/strong&gt;(Acknowledgment Number가 있음을 알리는 Flag),&lt;strong&gt;FIN&lt;/strong&gt;(종료)입니다.&lt;/li&gt;
+  &lt;li&gt;Window Size는 한번에 보낼 수 있는 데이터의 양으로 혼잡제어에서 사용하는 Sliding과 관련이 있는 것 같습니다.&lt;/li&gt;
+  &lt;li&gt;CheckSum은 오류 감지를 사용하는 것으로 알고 있습니다.&lt;/li&gt;
+  &lt;li&gt;Urgent Pointer는 긴급 포인터로써 우선적으로 처리 할 데이터의 여부를 나타내줍니다.&lt;/li&gt;
+  &lt;li&gt;Option으로 여러가지가 추가되어 전송 될 수 있다고 합니다. &lt;del&gt;아직 이 부분은 잘 모르겠습니다만, 공부해보겠습니다.&lt;/del&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;TCP 과정을 거치면서 여기 TCP 헤더에 있는 Flag부분에 비트 단위로 해당 패킷이 어떤 용도로 사용되는지 알 수 있습니다. &lt;strong&gt;먼저 요청을 나타내는 SYN과 응답을 나타내는 ACK 그리고 연결을 끝내는 FIN만 알아둡시다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;본격적으로 Handshake에 대해 공부해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/tcp-handshake.png&quot; width=&quot;800&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;첫 번째로 3-Way-Handshake는 클라이언트와 서버가 통신을 하기 전 서로를 확인하는 절차입니다.&lt;/strong&gt; TCP프로토콜의 특성 상 신뢰성있고 연결형 통신을 지원하기 때문에 통신을 하기 전 클라이언트와 서버가 연결되는 루트를 찾아야 합니다.&lt;/p&gt;
+
+&lt;p&gt;가장 먼저 클라이언트 측에서 SYN(요청) Flag를 가진 패킷을 서버 측에 전송합니다. 서버에서는 해당 패킷을 받게되면 ACK(응답)/SYN(요청) Flag를 동시에 가진 패킷을 다시 클라이언트에게 전송합니다. 그리고 다시 클라이언트 측에서 ACK(응답)패킷을 서버측에 전송하면서 Handshake가 마무리 됩니다.&lt;/p&gt;
+
+&lt;p&gt;해당 과정이 끝나면 클라이언트와 서버는 서로를 확인하게 되었으며, 서버는 클라이언트와 연결이 된 상태가 됩니다. 서버측에서 클라이언트에 대한 정보를 처리할 수 있게 되는 것 입니다.&lt;/p&gt;
+
+&lt;p&gt;이 후 통신을 진행하게 되면 Handshake를 통해 알게 된 루트(라우트)를 사용해서 통신을 진행하는 것으로 알고 있습니다. 해당 루트는 명확하게 클라이언트와 서버가 지나온 루트이기 때문에 확실하게 서로를 연결하고 있음을 알기 때문입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;두 번째로 4-Way-Handshake는 클라이언트와 서버가 통신을 끝낸 후 서로의 연결을 해제하는 절차입니다.&lt;/strong&gt; 통신이 끝났을 때 클라이언트와 서버는 서로 통신이 끝났음을 알려야 합니다. 이유로는 상시 통신이 진행중이지 않고, 특정한 이벤트가 발생했을 때 통신이 발생하기 때문입니다. 예를 들면 우리가 페이지에서 가만히 있으면 아무런 통신도 발생하지 않습니다. 페이지를 전환하거나(리소스를 받거나) REST API 등을 사용할 때만 통신하면 됩니다.&lt;/p&gt;
+
+&lt;p&gt;가장 먼저 클라이언트 측에서 FIN Flag를 가진 패킷을 서버 측에 전송합니다. 서버에서는 해당 패킷을 받게되면 ACK Flag를 클라이언트 측에 전송합니다.&lt;/p&gt;
+
+&lt;p&gt;이 후 잠시 서버는 시간을 기다리며 아직 클라이언트에게 보내지 못한 리소스가 있다면 모두 전송해줍니다. 이 시간을 갖기 위해서 서버는 조금 늦게 클라이언트에게 다시 FIN Flag를 가진 패킷을 전송합니다.&lt;/p&gt;
+
+&lt;p&gt;마지막으로 클라이언트가 FIN Flag에 대한 ACK Flag를 전송해주면 4-Way-Handshake가 완료됩니다. 이것으로 서버와 클라이언트를 연결하는 TCP 연결이 해제됩니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;ssl-handshake&quot;&gt;SSL-Handshake&lt;/h3&gt;
+
+&lt;p&gt;SSL-Handshake는 HTTPS에서 Secure(보안)을 위해 진행되는 인증 과정입니다. 정확히 말하면 서버와 클라이언트 간의 통신을 위한 &lt;strong&gt;대칭키 기반 암호화&lt;/strong&gt;를 진행하기 위해 &lt;strong&gt;대칭키&lt;/strong&gt;를 안전하게 교환하기 위해 &lt;strong&gt;공개키&lt;/strong&gt;방식을 이용하는 방법입니다.&lt;/p&gt;
+
+&lt;p&gt;이 개념을 익히기 전에 CA(인증 기관)에 대한 이해를 먼저 해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;CA는 디지털 인증서를 발급해주는 기관입니다. 여기서 디지털 인증서라는 것은 공개키 인증서로써 공개키 방식으로 암호화 혹은 복호화를 위한 키로 쓰이는 인증서입니다.&lt;/p&gt;
+
+&lt;p&gt;제가 이해 한 내용을 그림으로 그려보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/public/img/ssl.png&quot; width=&quot;800&quot; height=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;가장 처음에 클라이언트는 클라이언트의 버전(아마 브라우저의 버전으로 추정됩니다)/ 암호 알고리즘의 목록/ 사용 가능한 압축 방식 목록을 “Client Hello” 메세지로 서버측에 보냅니다.&lt;/p&gt;
+
+&lt;p&gt;서버측은 “Client Hello” 메세지에서 &lt;strong&gt;암호 알고리즘과 압축 방식을 선택&lt;/strong&gt; 합니다. 그 뒤 &lt;strong&gt;CA(인증기관)에게 인증받은 서명을 받은 인증서를 함께 담아 “Server Hello” 메세지로 보냅니다.&lt;/strong&gt; 이때 인증서는 서버측이 가지고 있는 공개키입니다.&lt;/p&gt;
+
+&lt;p&gt;클라이언트 측에서는 &lt;strong&gt;“Server Hello” 메세지에서 얻은 공개키로 유효한 인증서인지 검증을 해야합니다.&lt;/strong&gt; 기본적으로 브라우저는 신뢰할 수 있는 CA의 목록과 공개키를 가지고 있기 때문에 일일이 모든 CA를 찾지 않아도 검증을 시작할 수 있지만 목록에 없는 공개키 일 수 있습니다. 이때는 네트워크를 통해 관련 CA의 정보와 공개키를 얻어내고 검증을 시작합니다.&lt;/p&gt;
+
+&lt;p&gt;해당 인증서가 올바르지 않은 인증서라면 인증서가 없음을 알리고, 있다면 &lt;strong&gt;의사 난수를 만들어서 해당 공개키로 암호화 한 뒤 서버에게 전달&lt;/strong&gt; 합니다. 여기서 &lt;strong&gt;의사 난수는 이후에 클라이언트와 서버가 통신을 할 때 사용 할 대칭키가 됩니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;서버측은 공개키와 함께 복호화 할 수 있는 개인키를 가지고 있기 때문에 클라이언트가 보낸 암호문을 복호화하여 의사 난수를 알 수 있습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이로써 &lt;strong&gt;클라이언트는 자신이 생성했기에 안전한 대칭키를 얻었고, 개인키만이 복호화 할 수 있는 공개키로 암호화하여 서버에게 보냈기에 노출되지 않게 되었습니다.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;이 후 정상적인 통신이 진행 되었는지 교환 이력을 대칭키로 암호화하여 주고 받음으로써 통신을 마무리합니다.&lt;/p&gt;
+
+&lt;p&gt;앞으로의 통신은 해당 대칭키를 이용하여 통신하면 공개키 방식보다 빠른 통신이 가능해집니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;참고&quot;&gt;참고&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://nirsa.tistory.com/29&quot;&gt;https://nirsa.tistory.com/29&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://evan-moon.github.io/2019/11/10/header-of-tcp/&quot;&gt;https://evan-moon.github.io/2019/11/10/header-of-tcp/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brunch.co.kr/@sangjinkang/47&quot;&gt;https://brunch.co.kr/@sangjinkang/47&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aws-hyoh.tistory.com/entry/HTTPS-%ED%86%B5%EC%8B%A0%EA%B3%BC%EC%A0%95-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-5CA-%EC%9D%B8%EC%A6%9D%EA%B8%B0%EA%B4%80&quot;&gt;https://aws-hyoh.tistory.com/entry/HTTPS-%ED%86%B5%EC%8B%A0%EA%B3%BC%EC%A0%95-%EC%89%BD%EA%B2%8C-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0-5CA-%EC%9D%B8%EC%A6%9D%EA%B8%B0%EA%B4%80&lt;/a&gt;&lt;/p&gt;</content><author><name>Sharad Raj Singh Maurya</name><email>dev_sharad@outlook.com</email></author><category term="Basic" /><summary type="html">URL에 접근 시 일어나는 Handshake</summary></entry></feed>

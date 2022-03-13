@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jekyll Serial Programmer | Doc2Vec to Clustering</title>
+  
+  <link rel="stylesheet" href="/assets/css/post.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+  
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <script src="/assets/js/categories.js"></script>
+  
+  <script defer src="/assets/js/lbox.js"></script>
+  
+</head>
+
+  <body>
+    <main>
+      <header>
+  <a class="site-title" href="/">Jekyll Serial Programmer</a>
+</header>
+
+      <section class="article">
+        <div class="article-header">
+          <h2 class="article-title">Doc2Vec to Clustering</h2>
+          <small class="date">01 Jan 2021</small>
+          <div class="categories">
+            
+            <a href="#!" class="category">NLP</a>
+            
+          </div>
+        </div>
+        <div class="content"><h2 id="doc2vec-을-이용한-clustering">Doc2Vec 을 이용한 Clustering</h2>
+
+<p>Doc2Vec은 Word2Vec이 제안된 지 얼마 지나지 않아 비슷한 방식을 이용하여 문장도 벡터화 시킬 수 있는 방식으로 제안되었습니다. 실제로도 Word2Vec을 진행하는 과정과 비슷하게 작동하는 것을 볼 수 있고, 이 방식으로 인해 문서 군집화를 단순한 단어의 유무(BagOfWords)를 이용하는 방식에서 문장의 의미적인 측면에서 유사한 문서의 군집을 얻을 수 있는 희망이 생겼습니다.</p>
+
+<p>이전의 포스팅에서는 Clustering 하는 과정에서 단순 TF-IDF 개념을 이용하여 군집화 하는 방식을 보여드렸지만 이번 포스팅에서는 Doc2Vec을 이용하여 군집하는 과정을 적어보겠습니다.</p>
+
+<hr />
+
+<h3 id="clustring">Clustring</h3>
+
+<p>자세한 Clustering의 설명은 이전 포스트에 있습니다.</p>
+
+<p>요점으로 Clustering이 진행되는 과정을 가져와서 설명하겠습니다.</p>
+
+<ol>
+  <li>k개의 Representation Point를 임의의 요소의 벡터로 선택한다.</li>
+  <li>전체 데이터에 대해 Representation Point와의 거리를 계산한다.</li>
+  <li>해당 데이터의 군집을 가장 가까운 거리에 있는 Representation Point와 같은 군집으로 할당한다.</li>
+  <li>각 군집의 Representation Point를 해당 군집을 가진 데이터의 평균으로 업데이트한다.</li>
+  <li>전체 데이터를 기반으로 2-4단계를 다시 진행한다.</li>
+</ol>
+
+<p>데이터를 가장 잘 군집화 하는 Representation Point를 찾아가는 과정이 바로 K-means 군집화입니다. 제대로 위치를 찾아내면 각자 자신의 주변 데이터에 대해 군집화하기만 하면 각 군집에 속한 데이터를 찾을 수 있는 것이죠.</p>
+
+<p>이전의 Clustering을 하는 과정에서는 Cosine distance를 이용해서 Representation Point에서 각 점으로 distance를 구했습니다. 그 이유는 텍스트 데이터의 경우 각 데이터들이 독립적이며 단어 하나하나가 차원을 나타내기 때문에 euclidean 거리로 계산했을 때 가까운 거리를 잘 나타내더라도 거의 대부분의 데이터가 먼 거리로 표현되기 때문입니다.</p>
+
+<p>하지만 이번 Clustering에서는 Cosine distance보다 euclidean distance를 우선시하여 사용할 예정입니다. 그 이유는 Doc2Vec을 사용하면 각 문장을 벡터 공간에 놓음으로써 원하는 차원으로 압축 할 수 있기 때문입니다. 물론 두 방식을 모두 할 생각입니다.</p>
+
+<p>그리고 추가적으로 Pearson Correlation ( 상관계수 )도 포함해서 진행해볼 예정입니다. 벡터 공간에서 비슷한 단어들을 사용했을 때 각 벡터의 순서도 비슷할 것이라고 생각이 들어서 한 번 해보겠습니다.</p>
+
+<hr />
+
+<h3 id="doc2vec">Doc2Vec</h3>
+
+<p>Doc2Vec에 대해 공부해보겠습니다.</p>
+
+<p>Doc2Vec은 이전의 Word2Vec을 응용하여 문장 내 단어의 유사성을 벡터로 표현하는 것을 넘어 문장 간의 유사성을 벡터로 표현하는 방법입니다.</p>
+
+<p>일단 Word2Vec에 대한 설명은 이전 포스트에 있습니다.</p>
+
+<h4 id="1-word2vec">1. Word2Vec</h4>
+
+<p>Word2Vec을 간단히 말하면 <strong>‘주변 단어들이 비슷한 형태를 띄고 있는 단어들은 비슷한 의미를 가지고 있지 않을까?’</strong> 입니다.</p>
+
+<p><strong>[‘의자’,’앉’,’개’,’사료’,’먹는’]</strong> <strong>[‘의자’,’앉’,’고양이’,’사료’,’먹는’]</strong> 다음과 같은 두 단어의 배열로 이루어진 문장이 있다면 주변 단어가 동일하게 사용 된 개와 고양이가 어느정도 비슷한 의미를 가진다는 점을 알 수 있습니다.</p>
+
+<p>주변 단어를 이용하여 해당 단어를 얻는 방법, 즉 Word2Vec을 사용하는 방법으로 2가지 방식이 있었습니다. 한가지는 Cbow와 다른 하나는 Skip-gram 방식이였습니다.</p>
+
+<p><img src="/public/img/Word2Vec.png" alt="ex_screenshot" /></p>
+
+<ul>
+  <li>CBOW 방식은 주변 단어를 Input으로 해당 단어를 Output으로 작동하는데 이해하기 쉽게 주변단어의 벡터의 위치와 근접하게 해당 단어의 벡터를 옮긴다고 생각하면 됩니다. 예시에서 설명한 개와 고양이로 예시를 들면 <strong>[‘의자’,’앉’,’사료’,’먹는’]</strong> 의 방향으로 <strong>[‘개’]</strong> 의 벡터를 옮기고 마찬가지로 <strong>[‘고양이’]</strong> 벡터를 옮기면 두 벡터는 비슷한 방향으로 이동하기 때문에 <strong>[‘개’] 벡터와 [‘고양이’] 벡터는 가까이에 위치하며 이 결과를 우리는 개와 고양이는 유사성이 있다.</strong> 로 받아들입니다.</li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li>
+    <p>Skip-gram 방식은 해당 단어를 Input으로 주변 단어를 Output으로 작동하는데 해당 단어의 벡터 방향으로 주변 단어의 방향을 옮긴다는 의미가 됩니다. 여기서 간단히 생각하면 <strong>[‘개’]와 [‘고양이’]</strong> 는 벡터가 움직이지 않고 주변 벡터를 끌고온다는 생각을 할 수 있습니다. 하지만 <strong>두 단어도 중심단어로 사용되기 이전에 주변단어로 사용되고 이후에도 주변 단어로 사용한다는 점에서 벡터 이동이 생깁니다.</strong></p>
+  </li>
+  <li>
+    <p><strong>[‘개’] 와 [‘고양이’]는 가장 먼저 [‘의자’]에 가까워지고 [‘앉’]에 가까워지며 이후 [‘의자’,’앉’,’사료’,’먹는’]을 끌고오며 [‘사료’]와 가까워지고 [‘먹는’]에 가까워집니다.</strong></p>
+  </li>
+</ul>
+
+<p>실제로 일반적으로 Skip-gram이 높은 성능을 보인다고 말하기도 합니다.</p>
+
+<p>참고자료</p>
+
+<p>https://arxiv.org/pdf/1301.3781.pdf</p>
+
+<h4 id="2-doc2vec의-아이디어">2. Doc2Vec의 아이디어</h4>
+
+<p>Doc2Vec의 아이디어는 Word2Vec의 아이디어에서 단어의 벡터를 옮기는 부분에서 생겨납니다.</p>
+
+<p>Word2Vec은 중심단어를 기반으로 WindowSize 만큼 주변 단어를 탐색하면서 벡터 이동을 통해 유사한 단어들을 찾아가게 됩니다. 그러한 과정 중 모든 단어들은 유사한 단어들과 비슷한 벡터로 자리잡게 되는데, 그 과정에서 Document ( 논문에서는 Paragraph로 표기합니다 ) 벡터를 추가하여 벡터를 같이 이동시키게 된다면 Document 자체적으로 벡터값을 가질 수 있게 되는 아이디어 입니다.</p>
+
+<p>예시를 들어 설명하겠습니다.</p>
+
+<p><strong>[‘의자’,’앉’,’개’,’사료’,’먹는’]</strong></p>
+
+<p><strong>[‘자리’,’누워’,’고양이’,’먹이’,’먹는’]</strong></p>
+
+<p>다음과 같이 ‘의자’라는 단어를 ‘자리’로 바꾸거나 ‘사료’라는 단어를 ‘먹이’로 바꾸었을 때 서로 관련성이 있는 단어임은 쉽게 알 수 있습니다. 학습 데이터에서도 두 단어의 주변 단어가 비슷하게 분포되었다는 가정을 하면 Word2Vec에서도 각각의 단어들은 비슷한 벡터를 가질 것임은 지금까지 내용으로 알 수 있습니다.</p>
+
+<p>문제는 <strong>두 문장은 유사한 문장인가?</strong> 입니다.</p>
+
+<p>가장 먼저 Distributed Memory 방식이 있습니다.</p>
+
+<p><img src="/public/img/DM.png" alt="ex_screenshot" /></p>
+
+<p>위의 그림에서 등장하는 Document id( = Paragraph id )에 주목할 필요가 있습니다. 이 값으로 얻어내는 벡터가 바로 Document 벡터입니다.</p>
+
+<p><strong>Distributed Memory는 문서 자체의 벡터와 순차적으로 등장하는 단어를 Input하여 다음 단어를 예측하는 모델입니다.</strong> 예측한다는 말을 softmax를 통해 계산 된 값을 기반으로 Backpropagation을 이용하여 해당 단어 벡터를 Input 벡터 방향으로 끌어당긴다. 라고 이해하시면 됩니다.</p>
+
+<p>그렇게 되면 다음과 같은 그림이 됩니다.</p>
+
+<p><img src="/public/img/Doc2Vec-DM.png" alt="ex_screenshot" /></p>
+
+<p>순차적으로 이와 같은 계산을 하게 되면 단어들과 Document id 벡터의 연관성이 생기게 되며 Word2Vec과 마찬가지로 여러 문장들에서 많이 나온 단어들에 대해서는 여러 Document로 끌려가는 성질이 있기 때문에 벡터가 멀어지는 효과도 있습니다. 물론 negative Sampling이 필요할 것 같긴 하지만 말입니다.</p>
+
+<p><img src="/public/img/DBOW.png" alt="ex_screenshot" /></p>
+
+<p>DBOW의 경우에는 저도 지금 공부하는 중입니다. 정확히 모르지만 제가 이해하는 내용을 그림으로 설명해보도록 하겠습니다.</p>
+
+<p><img src="/public/img/Doc2Vec-DBOW.png" alt="ex_screenshot" /></p>
+
+<p>이 경우 문서에 대한 벡터를 얻을 수 있지만 단어들간의 유사한 정도가 유지되는지 잘 모르겠습니다. 더 공부해서 이해해보도록 하겠습니다.</p>
+
+<hr />
+
+<h3 id="doc2vec-clustering">Doc2Vec Clustering</h3>
+
+<p>그럼 이전 포스팅에서 했던 BagOfWords 기반의 Clustering을 Doc2Vec을 기반으로 진행 해보겠습니다.</p>
+
+<p>k-means 알고리즘 자체는 동일하므로 기존의 소스를 사용하면 될 것 같습니다. 하지만 단어 수가 차원의 수가 아닌 원하는 크기의 차원으로 축소시켰기 때문에 고차원에서 생기는 문제에 대해 어느정도 문제가 해결되었다고 예상하고 BagOfWords 기반의 Clustering 성능 관련 논문에서 효율이 낮았던 euclidean distance도 좋은 성능이 나올 것이라고 생각됩니다.</p>
+
+<ol>
+  <li>형태소 추출 전 추가적인 단어 추가</li>
+  <li>명사 형태소 추출</li>
+  <li>Doc2Vec을 이용하여 문서 데이터를 벡터화</li>
+  <li>K-means를 이용하여 문서 군집화</li>
+  <li>라벨링 된 정보를 이용하여 순수도를 기준으로 검증</li>
+</ol>
+
+<p>이러한 순서로 진행해보겠습니다.</p>
+
+<h4 id="1-형태소-추출-전-추가적인-단어-확보">1. 형태소 추출 전 추가적인 단어 확보</h4>
+
+<p>문장에서 주요한 의미를 가진 형태소인 명사를 추가해보도록 하겠습니다. 이유는 사용하는 데이터가 국민청원의 데이터이므로 뉴스와 같이 보편적인 단어가 아닌 신조어 및 특정 사건등에 대해 이야기 할 확률이 높습니다. 그런 명사들을 얻기 위해 lovit님의 soynlp를 이용하여 명사 추출을 진행합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">noun_extractor</span> <span class="o">=</span> <span class="n">LRNounExtractor_v2</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">min_num_of_features</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># Komoran에 추가 할 단어
+</span><span class="n">add_nouns</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="c1"># 데이터 전체 크기
+</span><span class="n">end</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+
+<span class="c1"># 메모리 부족 현상으로 커널이 닫혀서 batch size로 분할작업
+</span><span class="n">batch</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">end</span><span class="p">,</span><span class="n">batch</span><span class="p">):</span>
+  <span class="n">nouns_content</span> <span class="o">=</span> <span class="n">noun_extractor</span><span class="p">.</span><span class="n">train_extract</span><span class="p">(</span><span class="n">content</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">batch</span><span class="p">])</span>
+  <span class="n">nouns_title</span> <span class="o">=</span> <span class="n">noun_extractor</span><span class="p">.</span><span class="n">train_extract</span><span class="p">(</span><span class="n">title</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">batch</span><span class="p">])</span>
+  <span class="n">add_nouns</span><span class="p">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">nouns_content</span><span class="p">))</span>
+  <span class="n">add_nouns</span><span class="p">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">nouns_title</span><span class="p">))</span>
+
+  <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"add_userdic.txt"</span><span class="p">,</span><span class="s">'w'</span><span class="p">)</span>
+  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">add_nouns</span><span class="p">):</span>
+      <span class="n">f</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="s">'</span><span class="se">\t</span><span class="s">'</span> <span class="o">+</span> <span class="s">'NNG'</span><span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+  <span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p>작업 진행중 데이터량이 많아 메모리 부족 현상을 겪게되어 batch size를 지정하여 4분할로 명사를 추출했습니다. 약 8만개 정도 데이터에서 명사를 찾게 되었지만, min_num_of_features가 5이므로 단어가 조금 사라졌을지도 모릅니다. 추후에 min_num_of_features를 낮추어 진행해보도록 합니다.</p>
+
+<p>파이썬에서 Set의 union 등의 함수들은 효율이 안좋기로 유명하긴하지만 실제 모델 작업이 아닌 사전에 진행하는 단어 추가를 위한 작업이므로 set을 이용했습니다.</p>
+
+<h4 id="2-명사-형태소-추출">2. 명사 형태소 추출</h4>
+
+<p>텍스트 분석 중 분류 모델을 작성할때는 명사만 추출하더라도 충분한 성능이 나온다는 말을 들은적이 있습니다. 일반적으로 TF-IDF 같은 경우 각각의 단어 자체가 One-hot Vector로 만들어지기 때문에 명사만 추출하는게 옳은 거라고 생각합니다.</p>
+
+<p>마찬가지로 각각의 단어가 하나의 벡터를 갖는 Doc2Vec의 경우에도 비슷한 경우라고 생각되어 명사만 추출해보았습니다. 결과가 좋지 않으면 형용사와 동사를 추가하겠지만, 아무래도 모델이 무거워지기도 하며 문장에서 가장 큰 영향을 끼치는 명사만으로 진행하는 것이 최선이라고 생각됩니다.</p>
+
+<p>추후에 유연성있는 형태소 추출을 위해 관련 클래스를 만들었습니다. 명사만 추출하는 경우에는 Komoran에서 자체 제공하는 nouns 함수를 이용하면 됩니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">pos</span> <span class="o">=</span> <span class="p">[</span><span class="s">'NNG'</span><span class="p">,</span><span class="s">'NNP'</span><span class="p">,</span><span class="s">'NNB'</span><span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">tagging</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">user_words</span> <span class="o">=</span> <span class="s">''</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">kom</span> <span class="o">=</span> <span class="n">Komoran</span><span class="p">(</span><span class="n">userdic</span> <span class="o">=</span> <span class="n">user_words</span><span class="p">)</span>
+
+    <span class="c1"># lovit 님의 명사 추출을 한 값을 파일 명으로 리턴
+</span>    <span class="k">def</span> <span class="nf">get_nouns</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sents</span><span class="p">,</span><span class="n">result_type</span> <span class="o">=</span> <span class="s">'list'</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">sent</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sents</span><span class="p">):</span>
+            <span class="n">sents</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">kom</span><span class="p">.</span><span class="n">nouns</span><span class="p">(</span><span class="n">sent</span><span class="p">)</span>
+            <span class="k">if</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sents</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">==</span> <span class="mi">0</span><span class="p">):</span>
+                <span class="n">sents</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'error'</span><span class="p">]</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">result_type</span> <span class="o">==</span> <span class="s">'list'</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">sents</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">result_type</span> <span class="o">==</span> <span class="s">'str'</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">sents</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"result_type -&gt; list or str"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s">'error'</span>
+
+    <span class="k">def</span> <span class="nf">get_pos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">sents</span><span class="p">,</span><span class="n">pos</span><span class="o">=</span><span class="s">'all'</span><span class="p">,</span><span class="n">result_type</span> <span class="o">=</span> <span class="s">'list'</span><span class="p">):</span>
+
+        <span class="k">if</span><span class="p">(</span> <span class="n">pos</span> <span class="o">==</span> <span class="s">'all'</span> <span class="p">):</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">sent</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sents</span><span class="p">):</span>
+                <span class="n">sents</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span><span class="p">,</span><span class="n">pos_</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">kom</span><span class="p">.</span><span class="n">pos</span><span class="p">(</span><span class="n">sent</span><span class="p">)]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">sent</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sents</span><span class="p">):</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">sents</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span><span class="p">,</span><span class="n">pos_</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">kom</span><span class="p">.</span><span class="n">pos</span><span class="p">(</span><span class="n">sent</span><span class="p">)</span> <span class="k">if</span> <span class="n">pos_</span> <span class="ow">in</span> <span class="n">pos</span> <span class="p">]</span>
+                <span class="k">except</span><span class="p">:</span>
+                    <span class="n">sents</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s">'error'</span><span class="p">]</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">result_type</span> <span class="o">==</span> <span class="s">'list'</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">sents</span>
+        <span class="k">elif</span><span class="p">(</span><span class="n">result_type</span> <span class="o">==</span> <span class="s">'str'</span><span class="p">):</span>
+            <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="n">sents</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"result_type -&gt; list or str"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="s">'error'</span>
+
+
+</code></pre></div></div>
+
+<h4 id="3-doc2vec을-이용하여-문서-데이터를-벡터화">3. Doc2Vec을 이용하여 문서 데이터를 벡터화</h4>
+
+<p>Doc2Vec을 사용하기 위해 먼저 해야 할 일은 Document를 서로 구분지어주는 일입니다. TaggedDocument는 [words] [tags] 형태로 바꾸어 줍니다. 여기서 tags의 역할이 바로 document id를 부여하는 것이죠.</p>
+
+<p>공부하면서 참고한 블로그에서는 이 tags에는 여러 태그를 넣을 수 있는데 이 방법으로 분류작업에 유리한 방식으로 설계할 수 있을 것 같아서 참고자료 블로그에 추가했습니다.</p>
+
+<p>Doc2Vec 사용 소스는 아래와 같습니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">from</span> <span class="nn">gensim.models.doc2vec</span> <span class="kn">import</span> <span class="n">Doc2Vec</span><span class="p">,</span> <span class="n">TaggedDocument</span>
+
+<span class="n">tagging_class</span> <span class="o">=</span> <span class="n">tagging</span><span class="p">(</span><span class="n">user_words</span><span class="o">=</span><span class="s">'./add_userdic.txt'</span><span class="p">)</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="p">[</span><span class="s">'NNG'</span><span class="p">,</span><span class="s">'NNP'</span><span class="p">,</span><span class="s">'NNB'</span><span class="p">]</span>
+
+<span class="n">documents</span> <span class="o">=</span> <span class="p">[</span><span class="n">TaggedDocument</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">doc</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">tagging_class</span><span class="p">.</span><span class="n">get_pos</span><span class="p">(</span><span class="n">content</span><span class="p">,</span><span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span><span class="n">result_type</span><span class="o">=</span><span class="s">'list'</span><span class="p">))]</span>
+<span class="n">docModel</span> <span class="o">=</span> <span class="n">Doc2Vec</span><span class="p">(</span><span class="n">documents</span><span class="o">=</span><span class="n">documents</span><span class="p">,</span><span class="n">vector_size</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">window</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'./doc2VecModel.pkl'</span><span class="p">,</span><span class="s">'wb'</span><span class="p">)</span>
+<span class="n">pickle</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="n">docModel</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<span class="n">f</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p>각 document를 해당 document의 인덱스로 id값을 부여했습니다.</p>
+
+<p><img src="/public/img/taggedDocument1.png" alt="ex_screenshot" /></p>
+
+<p><img src="/public/img/taggedDocument2.png" alt="ex_screenshot" /></p>
+
+<p>그 결과는 위처럼 각 document에 등장한 단어들이 각 인덱스로 tagging 된 것을 확인할 수 있습니다. 그 결과를 이용하여 doc2Vec을 사용하면 됩니다.</p>
+
+<h4 id="4-k-means-적용">4. k-means 적용</h4>
+
+<p>k-means 알고리즘은 직접 만든 LionClustering을 사용해서 군집화 해보겠습니다. 마침 혼자 공부하면서 구현한 알고리즘을 적용해 볼 기회가 되어 다행입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">a</span> <span class="o">=</span> <span class="n">LionClustering</span><span class="p">(</span><span class="n">dist_func</span><span class="o">=</span><span class="s">'euc'</span><span class="p">,</span><span class="n">cluster_num</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">stop_rate</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">initialize</span><span class="o">=</span><span class="s">'entropy'</span><span class="p">)</span>
+<span class="n">a</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="p">.</span><span class="n">docvecs</span><span class="p">.</span><span class="n">vectors_docs</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>model 변수는 Doc2vec 모델이며 LionClustering을 이용하여 거리는 유클리디안 거리 공식을 사용하였고 cluster 갯수는 300개 최대 10번 시행 중 이전 entropy와 현재 entropy의 차이가 0이면 (완전동일) 한 경우 먼저 멈추게 되는 방식입니다. stop_rate를 변경하면 entropy 오차 범위를 조금 넓힐 수 있으니 유연한 군집이 가능합니다.</p>
+
+<p>초기화 방식은 random sampling이지만 각 중심 벡터가 가능한 균등하게 데이터를 가질 수 있도록 entropy 점수를 매겨 Maximum Entropy를 가지는 중심 벡터로 초기화 하도록 했습니다.</p>
+
+<h4 id="lions-clustering-완성-후에-적는-것으로">Lion’s Clustering 완성 후에 적는 것으로</h4>
+
+<h4 id="참고-자료">참고 자료:</h4>
+
+<p>https://roboreport.co.kr/doc2vec-%ED%9B%88%EB%A0%A8-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EC%84%A4%EB%AA%85/</p>
+
+<p>https://lovit.github.io/nlp/representation/2018/03/26/word_doc_embedding/</p>
+
+<p>https://frhyme.github.io/python-libs/gensim1_doc2vec_tagged_document/#taggeddocument-with-multiple-tags</p>
+
+<p>//논문도 넣자</p>
+</div>
+      </section>
+      <footer>
+  <p>&copy; 1947 - 2022 | Jekyll Serial Programmer</p>
+</footer>
+
+    </main>
+    <section id="category-modal-bg"></section>
+<section id="category-modal">
+  <h1 id="category-modal-title"></h1>
+  <section id="category-modal-content"></section>
+</section>
+
+  </body>
+</html>

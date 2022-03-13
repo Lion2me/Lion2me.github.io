@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jekyll Serial Programmer | Spring Boot</title>
+  
+  <link rel="stylesheet" href="/assets/css/post.css" />
+  <link rel="stylesheet" href="/assets/css/syntax.css" />
+  
+  <link rel="stylesheet" href="/assets/css/common.css" />
+  <script src="/assets/js/categories.js"></script>
+  
+  <script defer src="/assets/js/lbox.js"></script>
+  
+</head>
+
+  <body>
+    <main>
+      <header>
+  <a class="site-title" href="/">Jekyll Serial Programmer</a>
+</header>
+
+      <section class="article">
+        <div class="article-header">
+          <h2 class="article-title">Spring Boot</h2>
+          <small class="date">25 Sep 2021</small>
+          <div class="categories">
+            
+            <a href="#!" class="category">Spring</a>
+            
+          </div>
+        </div>
+        <div class="content"><h2 id="spring-boot">Spring Boot</h2>
+
+<p>이전 회사를 다닐 때 Spring Framework로 프로젝트를 진행했었는데 이번에 Spring Boot를 공부하면서 “아.. 내가 너무 부족했구나”라는 생각을 하고 다시 공부를 시작합니다.</p>
+
+<p><del>공부할게 많아서 정말 정말 행복하지만! 재취업 먼저 되었으면..!</del></p>
+
+<h2 id="spring-boot가-무엇인가">Spring Boot가 무엇인가?</h2>
+
+<p>기본적으로 Spring Framework의 업데이트 버전으로 이해 할 수 있습니다.</p>
+
+<p>기존의 Spring Framework는 웹 애플리케이션을 만들기 위해서는 정말 다양한 설정을 거치고, 그 설정에 대해서 이해해야 했습니다. 하지만 Spring Boot는 그러한 설정을 매우 간략하게 만듭니다.</p>
+
+<p>그럼 얼마나 편해졌는지 확인해보겠습니다.</p>
+
+<h4 id="의존성">의존성</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">jpa</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">redis</span><span class="o">-</span><span class="n">reactive</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">mustache</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">oauth2</span><span class="o">-</span><span class="n">client</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">web</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">parent</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">data</span><span class="o">-</span><span class="n">jpa</span><span class="err">'</span>
+<span class="n">implementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">webflux</span><span class="err">'</span>
+<span class="n">testImplementation</span> <span class="err">'</span><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">boot</span><span class="o">:</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">test</span><span class="err">'</span>
+</code></pre></div></div>
+
+<p>Gradle로 설정 한 위의 의존 라이브러리들을 보시면 대부분 spring-boot-starter로 시작하는 것을 알 수 있습니다.</p>
+
+<p>각각의 의존 라이브러리 내에는 해당 기능과 관련 된 모든 라이브러리가 포함되어 있습니다.</p>
+
+<p>예를들면 starter-test를 보시면, JUnit이나 AssertJ, JsonPath, SpringTest 등 다양한 라이브러리등이 포함되어 있습니다.</p>
+
+<p>기존의 springframework를 이용해서 Maven을 이용한다면 아마 수십줄의 코드가 적혀야 했을 것입니다.</p>
+
+<p><del>내가 이걸 이제 알다니</del></p>
+
+<h4 id="db설정">DB설정</h4>
+
+<p>자바를 통해 DB를 연결한다면 기본적으로 JDBC를 연결해야 합니다.
+그리고 이전의 포스트에서 적은 내용처럼 Spring에서는 자체적으로 Spring JDBC를 제공합니다.</p>
+
+<p>Spring Framework의 JDBC를 통해 DB에 연결하려면, 가장 처음으로 해당 Bean을 만들어야 합니다.</p>
+
+<p>Spring JDBC 객체를 만들기 위해 데이터베이스의 DATABASE path, id, password, RDBMS Driver 정보를 입력해주고 Spring JDBC를 만들어주고 ORM이나 SQLMapper를 사용 할 경우 관련 빈을 생성할 떄 Spring JDBC를 사용해줍니다.</p>
+
+<p>관련 문서를 참조하면 어려운 일은 아니지만, Spring Boot는 차원이 다릅니다.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">spring</span><span class="pi">:</span>
+  <span class="na">datasource</span><span class="pi">:</span>
+    <span class="na">url</span><span class="pi">:</span> <span class="s">jdbc:mariadb://localhost:3306/test</span>
+    <span class="na">driver-class-name</span><span class="pi">:</span> <span class="s">org.mariadb.jdbc.Driver</span>
+    <span class="na">username</span><span class="pi">:</span> <span class="s">id</span>
+    <span class="na">password</span><span class="pi">:</span> <span class="s">password</span>
+  <span class="na">jpa</span><span class="pi">:</span>
+    <span class="na">open-in-view</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">generate-ddl</span><span class="pi">:</span> <span class="no">true</span> <span class="c1"># table을 새로 만들건지</span>
+    <span class="na">show-sql</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">hibernate</span><span class="pi">:</span>
+      <span class="na">ddl-auto</span><span class="pi">:</span> <span class="s">validate</span> <span class="c1"># ddl(table 관련) 유지 방식?</span>
+</code></pre></div></div>
+
+<p>깔끔하게 정리 됩니다.</p>
+
+<h3 id="spring-security-적용">Spring Security 적용</h3>
+
+<p>이전 Spring Framework 3 버전을 사용 했을 떄 Spring Security를 적용하기 위해서 Security 관련 xml을 별도로 만들고 관리했었습니다.</p>
+
+<p>속성값을 이용해서 세션 정보를 수정하기도했고, 핸들러를 적용하거나 URL 설정등을 했었죠.</p>
+
+<p>하지만 Boot 5에서는 WebSecurityConfigurerAdapter를 상속받은 클래스를 통해서 설정 할 수 있습니다.</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@Configuration</span>
+<span class="nd">@EnableWebSecurity</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SecurityConfig</span> <span class="kd">extends</span> <span class="nc">WebSecurityConfigurerAdapter</span> <span class="o">{</span>
+
+  <span class="nd">@Override</span>
+  <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">configure</span><span class="o">(</span><span class="nc">HttpSecurity</span> <span class="n">http</span><span class="o">)</span> <span class="kd">throws</span> <span class="nc">Exception</span><span class="o">{</span>
+      <span class="n">http</span>
+        <span class="o">.</span><span class="na">csrf</span><span class="o">().</span><span class="na">disable</span><span class="o">()</span> <span class="c1">// csrf를 비활성화 합니다!</span>
+          <span class="o">.</span><span class="na">authorizeRequests</span><span class="o">()</span> <span class="c1">// 인가 과정에서 url 별 접근 권한을 나눕니다.</span>
+              <span class="o">.</span><span class="na">antMatchers</span><span class="o">(</span><span class="s">"/admin/**"</span><span class="o">).</span><span class="na">hasRole</span><span class="o">(</span><span class="s">"ADMIN"</span><span class="o">)</span>
+              <span class="o">.</span><span class="na">antMatchers</span><span class="o">(</span><span class="s">"/user/**"</span><span class="o">).</span><span class="na">hasRole</span><span class="o">(</span><span class="s">"USER"</span><span class="o">)</span>
+              <span class="o">.</span><span class="na">antMatchers</span><span class="o">(</span><span class="s">"/signup"</span><span class="o">).</span><span class="na">hasRole</span><span class="o">(</span><span class="s">"ANONYMOUS"</span><span class="o">)</span>
+              <span class="o">.</span><span class="na">anyRequest</span><span class="o">().</span><span class="na">permitAll</span><span class="o">()</span>
+              <span class="o">.</span><span class="na">and</span><span class="o">()</span>
+          <span class="o">.</span><span class="na">formLogin</span><span class="o">()</span> <span class="c1">// 로그인 시 입력 폼에서 입력 받을 내용을 설정합니다. 여기서 핸들러 설정도 가능해요!</span>
+                      <span class="o">.</span><span class="na">loginPage</span><span class="o">(</span><span class="s">"/loginForm"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">usernameParameter</span><span class="o">(</span><span class="s">"username"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">passwordParameter</span><span class="o">(</span><span class="s">"password"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">loginProcessingUrl</span><span class="o">(</span><span class="s">"/login"</span><span class="o">)</span>
+                      <span class="o">.</span><span class="na">successHandler</span><span class="o">(</span><span class="k">new</span> <span class="n">myLoginSuccessHandler</span><span class="o">())</span>
+                      <span class="o">.</span><span class="na">failureHandler</span><span class="o">(</span><span class="k">new</span> <span class="n">myLoginFailureHandler</span><span class="o">())</span>
+                      <span class="o">.</span><span class="na">permitAll</span><span class="o">()</span>
+              <span class="o">.</span><span class="na">and</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">logout</span><span class="o">()</span> <span class="c1">// 로그아웃도 가능합니다.</span>
+               <span class="o">.</span><span class="na">permitAll</span><span class="o">()</span>
+               <span class="o">.</span><span class="na">logoutUrl</span><span class="o">(</span><span class="s">"/logout"</span><span class="o">)</span>
+               <span class="o">.</span><span class="na">logoutSuccessUrl</span><span class="o">(</span><span class="s">"/"</span><span class="o">)</span>
+               <span class="o">.</span><span class="na">and</span><span class="o">()</span>
+           <span class="o">.</span><span class="na">exceptionHandling</span><span class="o">()</span>
+               <span class="o">.</span><span class="na">accessDeniedPage</span><span class="o">(</span><span class="s">"/accessDenied_page"</span><span class="o">);</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h4 id="리액티브-프로그래밍">리액티브 프로그래밍</h4>
+
+<p>이 부분부터 대략 정신이 멍해집니다.</p>
+
+<p>리액티브 프로그래밍 심지어 자바를 이용해서 Spring에 사용하는 webflux는 추후에 공부를 하고 포스팅하도록 하겠습니다.</p>
+
+<hr />
+
+<p>스프링 부트 공부를 시작하면서 느낀 점은, Spring Framework로 개발을 시작한 제가 다시 한번 “무언가 만들어 볼 수 있겠다”는 자신감이 생기는 기분입니다.</p>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+
+</div>
+      </section>
+      <footer>
+  <p>&copy; 1947 - 2022 | Jekyll Serial Programmer</p>
+</footer>
+
+    </main>
+    <section id="category-modal-bg"></section>
+<section id="category-modal">
+  <h1 id="category-modal-title"></h1>
+  <section id="category-modal-content"></section>
+</section>
+
+  </body>
+</html>
