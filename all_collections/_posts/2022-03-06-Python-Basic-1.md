@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JPA
+title: Python Basic 1 - Think Python
 date: 2021-12-15 21:05:23 +0900
 category: Spring
 use_math: true

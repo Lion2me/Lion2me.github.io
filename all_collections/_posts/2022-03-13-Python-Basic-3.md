@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Python Basic 3 - List&Dict
+title: Python Basic 3 - Function
 date: 2021-12-15 21:05:23 +0900
 category: Spring
 use_math: true
 ---
 
-Python Basic 2 - 리스트와 딕셔너리
+Python Basic 3 - Function
 ---
 
 ## 함수
