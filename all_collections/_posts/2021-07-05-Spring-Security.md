@@ -61,7 +61,7 @@ categories: Spring
 
 이 그림보다 좋은 그림을 보질 못해서 가져오도록 하겠습니다.
 
-<img src="/public/img/시큐리티.png" width="600" height="400">
+<img src="/assets/img/시큐리티.png" width="600" height="400">
 
 과정을 글로 표현해보겠습니다.
 
@@ -81,7 +81,7 @@ categories: Spring
 
 ## 시큐리티의 필터(Filter)
 
-<img src="/public/img/시큐리티필터.jpeg" width="600" height="400">
+<img src="/assets/img/시큐리티필터.jpeg" width="600" height="400">
 
 이 무서운 그림은 [hyozkim.log](https://velog.io/@sa833591/Spring-Security-5-Spring-Security-Filter-%EC%A0%81%EC%9A%A9) 페이지에서 가져온 그림입니다. 왼쪽에 보시면 시큐리티에서 사용하는 필터를 알 수 있습니다.
 

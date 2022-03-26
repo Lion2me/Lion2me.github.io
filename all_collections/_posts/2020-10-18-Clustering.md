@@ -37,7 +37,7 @@ Distance Or similarity
 
 그럼 distance의 종류를 살펴보겠습니다.
 
-#### 1. euclidean distance
+### 1. euclidean distance
 
 euclidean distance는 머신러닝을 공부하면 흔하게 볼 수 있는 거리 공식입니다. l2 distance 라고도 불리며 피타고라스 정리와 유사하게 두 위치 사이의 거리를 구하는 공식이라고 생각하면 됩니다.
 
@@ -47,7 +47,7 @@ $$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2...}$$
 
 때문에 정말 유사한 데이터가 아닌 경우 너무나도 먼 거리를 갖게 되어버리는 결과가 생깁니다. 각 단어의 수 만큼 차원을 갖는 텍스트 데이터의 경우 euclidean distance는 조심히 사용해야 합니다.
 
-#### 2.cosine distance
+### 2.cosine distance
 
 cosine distance는 cosine similarity를 이용하여 구하는 거리입니다.
 
@@ -67,7 +67,7 @@ $$if(a_i >= 0, b_i >= 0): 0 < cos(\theta)<1$$
 
 $$dist(a,b) = 1-cos(\theta)$$
 
-#### 3.jaccard distance
+### 3.jaccard distance
 
 jaccard distance는 집합의 개념으로 알아볼 수 있는 두 데이터 사이의 거리 공식입니다. 그렇기 때문에 카테고리 형식으로 구분되어 있는 데이터에 사용 할 수 있으며, 우리가 사용하는 텍스트 분석에 사용할 수 있는 방식이라고 생각할 수 있습니다.
 
@@ -81,7 +81,7 @@ $$0 <= J_{sim} <= 1$$
 
 $$J*{dist} = {1 - J*{sim}}$$
 
-#### 4.Pearson correlation coefficient
+### 4.Pearson correlation coefficient
 
 흔히 상관계수라고 알고 있는 통계적 방법 중 가장 널리 쓰이는 방식입니다. 일반적으로 상관관계라는 말은 이 Pearson correlation coefficient입니다. 그러므로 짧게 상관관계라고 말하겠습니다.
 
@@ -97,7 +97,7 @@ $$N = 집단\ 내\ 개체수$$
 
 공분산의 문제인 **두 확률분포가 얼마나 상관성이 있는지** 를 알 수 있게 되어 비교할 수 있는 지표로 사용할 수 있습니다.
 
-#### 5.Averaged Kullback-Leibler Divergence
+### 5.Averaged Kullback-Leibler Divergence
 
 Kullback-Leibler Divergence는 기본적으로 similarity와 distance 개념으로 만들어진 개념은 아닙니다. 정확히는 두 확률분포를 차이를 알기 위해 사용하는 방식입니다. 예를 들면 P의 분포에 비해 Q의 분포는 얼마나 차이가 나는가? 를 알기위한 방식입니다.
 
@@ -148,13 +148,13 @@ K-means Clustering
 
 ---
 
-### k-means initialize
+## k-means initialize
 
-##### random initialize
+### random initialize
 
 적힌 그대로 랜덤으로 초기화를 시키는 방법입니다. 현재 이 방법으로 알고리즘을 만들었으며, 덕분에 엄청난 시간이 소요되는 것을 알 수 있습니다. 운이 좋게 서로 멀리 떨어져있는 요소들을 잡는다면 좋은 성능을 보이겠지만, 그렇지 않으면 최악의 성능을 보일 수 있습니다.
 
-##### random initialize - Maximum entropy score
+### random initialize - Maximum entropy score
 
 k-means++ 와 Ball cut 방법을 사용하기 전 random initialize로 최대한 좋은 대표벡터를 얻기 위해서 고안한 방법입니다. 제가 임의로 만든 방법이라 좋은 성능이 나올지는 조금 더 공부를 해 봐야겠지만 좋은 대표 벡터의 조건이 균등하게 데이터를 구분하는 벡터라는 가정이라면 그 지점은 entropy가 높은 지점일 것이라는 예측에서 생각한 방법입니다.
 
@@ -162,37 +162,37 @@ entropy는 데이터의 크기에 따라 값이 달라지므로 군집을 시작
 
 다만 이 방법은 여러번의 initialize 과정이 동반하므로 k-means++에서는 사용 할 수 없을 것으로 보입니다. 너무 오래걸릴 것 같거든요...
 
-##### k-means++
+### k-means++
 
 k-means++는 거리를 기반으로 다음 초기값의 확률분포를 만드는 방법입니다. 하지만 이 방식은 텍스트 데이터에서 큰 성능을 보이지 않음을 lovit님의 블로그(링크)에서 알 수 있습니다. 이유는 backOfWords의 특성상 가까운 거리는 큰 의미를 가지지만 먼 거리에 대해 의미를 논하기에는 sparseMatrix의 데이터는 대체적으로 먼 거리로 측정이 되기 때문입니다.
 
 즉 단어 1개가 1개의 차원을 나타내는 고차원의 데이터 셋에서는 k-means++에서 원하는 거리 기반 확률분포는 큰 효과를 갖지 못한다는 것입니다.
 
-##### Ball cut
+### Ball cut
 
 Ball cut은 그러한 고차원상의 k-means++를 대체할 방법으로 설명되어 있었습니다. 파라미터 $$$t$$$를 설정하고 한 점을 선택할 때 거리가 $$$t$$$ 이하인 점을 전부 삭제하는 방식으로 진행됩니다. 그렇게 벡터 공간이 비거나 혹은 k개의 군집을 만들게 되면 초기화를 끝내고 혹시나 벡터 공간이 k개의 군집을 선택하기 전에 비어버린다면 선택되지 않은 모든 점들 중 랜덤으로 초기화를 하는 방식입니다.
 
 ---
 
-#### k-means clustering fitting
+## k-means clustering fitting
 
 본격적으로 k-means를 실행시켜보겠습니다. 기준은 random sampling initializer으로 초기화를 시킨 뒤 단계를 밟아가며 진행하는 과정입니다.
 
 첫 번째로 initialize를 진행합니다.
 
-![ex_screenshot](/public/img/cluster_init1.png)
+![ex_screenshot](/assets/img/cluster_init1.png)
 
 위의 그림에서 검은 점으로 표시된 데이터 중 파랑, 빨강, 초록색으로 표시 된 점이 바로 Random initialize한 점입니다. 그리고 해당 점을 통해 가장 가까운 데이터를 표시하면 이 부분이 첫번째 과정인 k개의 Representation Point를 정하는 곳이고, 다음 단계로 이 점들과 가장 가까운 데이터들을 표시하면 다음과 같은 그림이 나옵니다.
 
-![ex_screenshot](/public/img/cluster1.png)
+![ex_screenshot](/assets/img/cluster1.png)
 
 빨간색이 가장 큰 면적을 차지고하고 있군요, 2차원 공간으로 확인하니 initialize의 중요성을 확실하게 알 수 있습니다. 그리고 같은 군집에 있는 데이터들의 평균으로 Representation Point를 바꿔가며 2-4번 까지의 과정을 3번 거치면 Representation Point는 다음과 같이 바뀝니다.
 
-![ex_screenshot](/public/img/cluster_init2.png)
+![ex_screenshot](/assets/img/cluster_init2.png)
 
 첫 initialize와 비교하면 파란점과 초록점은 점차 가운데로 모여드는 느낌으로 이동하고, 빨간색은 조금 중앙에서 멀어집니다.
 
-![ex_screenshot](/public/img/cluster2.png)
+![ex_screenshot](/assets/img/cluster2.png)
 
 처음 그림보다 데이터들은 어느정도 편파적인 성향이 사라짐을 볼 수 있습니다. 그리고 이러한 변화는 어느정도의 반복에서 수렴하게 됩니다. 즉 더 이상 Representation Point의 변화가 없어지며 벡터는 수렴하여 움직이지 않게 됩니다. 그때, K-means는 멈추게 됩니다. 비록 Representation이 완벽하게 수렴하지 않더라도 K-means 알고리즘에서는 max_iter라는 파라미터를 이용하여 몇 번 반복할 것인지 정할 수 있습니다.
 

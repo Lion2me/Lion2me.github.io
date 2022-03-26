@@ -14,7 +14,7 @@ Doc2Vec은 Word2Vec이 제안된 지 얼마 지나지 않아 비슷한 방식을
 
 ---
 
-### Clustring
+## Clustring
 
 자세한 Clustering의 설명은 이전 포스트에 있습니다.
 
@@ -36,7 +36,7 @@ Doc2Vec은 Word2Vec이 제안된 지 얼마 지나지 않아 비슷한 방식을
 
 ---
 
-### Doc2Vec
+## Doc2Vec
 
 Doc2Vec에 대해 공부해보겠습니다.
 
@@ -44,7 +44,7 @@ Doc2Vec은 이전의 Word2Vec을 응용하여 문장 내 단어의 유사성을 
 
 일단 Word2Vec에 대한 설명은 이전 포스트에 있습니다.
 
-#### 1. Word2Vec
+### 1. Word2Vec
 
 Word2Vec을 간단히 말하면 **'주변 단어들이 비슷한 형태를 띄고 있는 단어들은 비슷한 의미를 가지고 있지 않을까?'** 입니다.
 
@@ -52,7 +52,7 @@ Word2Vec을 간단히 말하면 **'주변 단어들이 비슷한 형태를 띄�
 
 주변 단어를 이용하여 해당 단어를 얻는 방법, 즉 Word2Vec을 사용하는 방법으로 2가지 방식이 있었습니다. 한가지는 Cbow와 다른 하나는 Skip-gram 방식이였습니다.
 
-![ex_screenshot](/public/img/Word2Vec.png)
+![ex_screenshot](/assets/img/Word2Vec.png)
 
 -	CBOW 방식은 주변 단어를 Input으로 해당 단어를 Output으로 작동하는데 이해하기 쉽게 주변단어의 벡터의 위치와 근접하게 해당 단어의 벡터를 옮긴다고 생각하면 됩니다. 예시에서 설명한 개와 고양이로 예시를 들면 **['의자','앉','사료','먹는']** 의 방향으로 **['개']** 의 벡터를 옮기고 마찬가지로 **['고양이']** 벡터를 옮기면 두 벡터는 비슷한 방향으로 이동하기 때문에 **['개'] 벡터와 ['고양이'] 벡터는 가까이에 위치하며 이 결과를 우리는 개와 고양이는 유사성이 있다.** 로 받아들입니다.
 
@@ -68,7 +68,7 @@ Word2Vec을 간단히 말하면 **'주변 단어들이 비슷한 형태를 띄�
 
 https://arxiv.org/pdf/1301.3781.pdf
 
-#### 2. Doc2Vec의 아이디어
+### 2. Doc2Vec의 아이디어
 
 Doc2Vec의 아이디어는 Word2Vec의 아이디어에서 단어의 벡터를 옮기는 부분에서 생겨납니다.
 
@@ -86,7 +86,7 @@ Word2Vec은 중심단어를 기반으로 WindowSize 만큼 주변 단어를 탐�
 
 가장 먼저 Distributed Memory 방식이 있습니다.
 
-![ex_screenshot](/public/img/DM.png)
+![ex_screenshot](/assets/img/DM.png)
 
 위의 그림에서 등장하는 Document id( = Paragraph id )에 주목할 필요가 있습니다. 이 값으로 얻어내는 벡터가 바로 Document 벡터입니다.
 
@@ -94,21 +94,21 @@ Word2Vec은 중심단어를 기반으로 WindowSize 만큼 주변 단어를 탐�
 
 그렇게 되면 다음과 같은 그림이 됩니다.
 
-![ex_screenshot](/public/img/Doc2Vec-DM.png)
+![ex_screenshot](/assets/img/Doc2Vec-DM.png)
 
 순차적으로 이와 같은 계산을 하게 되면 단어들과 Document id 벡터의 연관성이 생기게 되며 Word2Vec과 마찬가지로 여러 문장들에서 많이 나온 단어들에 대해서는 여러 Document로 끌려가는 성질이 있기 때문에 벡터가 멀어지는 효과도 있습니다. 물론 negative Sampling이 필요할 것 같긴 하지만 말입니다.
 
-![ex_screenshot](/public/img/DBOW.png)
+![ex_screenshot](/assets/img/DBOW.png)
 
 DBOW의 경우에는 저도 지금 공부하는 중입니다. 정확히 모르지만 제가 이해하는 내용을 그림으로 설명해보도록 하겠습니다.
 
-![ex_screenshot](/public/img/Doc2Vec-DBOW.png)
+![ex_screenshot](/assets/img/Doc2Vec-DBOW.png)
 
 이 경우 문서에 대한 벡터를 얻을 수 있지만 단어들간의 유사한 정도가 유지되는지 잘 모르겠습니다. 더 공부해서 이해해보도록 하겠습니다.
 
 ---
 
-### Doc2Vec Clustering
+## Doc2Vec Clustering
 
 그럼 이전 포스팅에서 했던 BagOfWords 기반의 Clustering을 Doc2Vec을 기반으로 진행 해보겠습니다.
 
@@ -122,7 +122,7 @@ k-means 알고리즘 자체는 동일하므로 기존의 소스를 사용하면 
 
 이러한 순서로 진행해보겠습니다.
 
-#### 1. 형태소 추출 전 추가적인 단어 확보
+### 1. 형태소 추출 전 추가적인 단어 확보
 
 문장에서 주요한 의미를 가진 형태소인 명사를 추가해보도록 하겠습니다. 이유는 사용하는 데이터가 국민청원의 데이터이므로 뉴스와 같이 보편적인 단어가 아닌 신조어 및 특정 사건등에 대해 이야기 할 확률이 높습니다. 그런 명사들을 얻기 위해 lovit님의 soynlp를 이용하여 명사 추출을 진행합니다.
 
@@ -155,7 +155,7 @@ for i in range(0,end,batch):
 
 파이썬에서 Set의 union 등의 함수들은 효율이 안좋기로 유명하긴하지만 실제 모델 작업이 아닌 사전에 진행하는 단어 추가를 위한 작업이므로 set을 이용했습니다.
 
-#### 2. 명사 형태소 추출
+### 2. 명사 형태소 추출
 
 텍스트 분석 중 분류 모델을 작성할때는 명사만 추출하더라도 충분한 성능이 나온다는 말을 들은적이 있습니다. 일반적으로 TF-IDF 같은 경우 각각의 단어 자체가 One-hot Vector로 만들어지기 때문에 명사만 추출하는게 옳은 거라고 생각합니다.
 
@@ -208,7 +208,7 @@ class tagging:
 
 ```
 
-#### 3. Doc2Vec을 이용하여 문서 데이터를 벡터화
+### 3. Doc2Vec을 이용하여 문서 데이터를 벡터화
 
 Doc2Vec을 사용하기 위해 먼저 해야 할 일은 Document를 서로 구분지어주는 일입니다. TaggedDocument는 [words] [tags] 형태로 바꾸어 줍니다. 여기서 tags의 역할이 바로 document id를 부여하는 것이죠.
 
@@ -235,9 +235,9 @@ f.close()
 
 각 document를 해당 document의 인덱스로 id값을 부여했습니다.
 
-![ex_screenshot](/public/img/taggedDocument1.png)
+![ex_screenshot](/assets/img/taggedDocument1.png)
 
-![ex_screenshot](/public/img/taggedDocument2.png)
+![ex_screenshot](/assets/img/taggedDocument2.png)
 
 그 결과는 위처럼 각 document에 등장한 단어들이 각 인덱스로 tagging 된 것을 확인할 수 있습니다. 그 결과를 이용하여 doc2Vec을 사용하면 됩니다.
 
@@ -256,9 +256,9 @@ model 변수는 Doc2vec 모델이며 LionClustering을 이용하여 거리는 �
 
 초기화 방식은 random sampling이지만 각 중심 벡터가 가능한 균등하게 데이터를 가질 수 있도록 entropy 점수를 매겨 Maximum Entropy를 가지는 중심 벡터로 초기화 하도록 했습니다.
 
-#### Lion's Clustering 완성 후에 적는 것으로
+### Lion's Clustering 완성 후에 적는 것으로
 
-#### 참고 자료:
+### 참고 자료:
 
 https://roboreport.co.kr/doc2vec-%ED%9B%88%EB%A0%A8-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0-%EC%84%A4%EB%AA%85/
 

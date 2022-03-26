@@ -21,7 +21,7 @@ Spring Boot
 
 그럼 얼마나 편해졌는지 확인해보겠습니다.
 
-#### 의존성
+### 의존성
 
 ```java
 implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -45,7 +45,7 @@ Gradle로 설정 한 위의 의존 라이브러리들을 보시면 대부분 spr
 
 ~~내가 이걸 이제 알다니~~
 
-#### DB설정
+### DB설정
 
 자바를 통해 DB를 연결한다면 기본적으로 JDBC를 연결해야 합니다.
 그리고 이전의 포스트에서 적은 내용처럼 Spring에서는 자체적으로 Spring JDBC를 제공합니다.
@@ -73,7 +73,7 @@ spring:
 
 깔끔하게 정리 됩니다.
 
-### Spring Security 적용
+## Spring Security 적용
 
 이전 Spring Framework 3 버전을 사용 했을 떄 Spring Security를 적용하기 위해서 Security 관련 xml을 별도로 만들고 관리했었습니다.
 

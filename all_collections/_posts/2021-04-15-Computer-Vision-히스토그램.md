@@ -24,9 +24,9 @@ category: Vision
 
 다음의 두 이미지를 이용하여 실습을 진행하겠습니다.
 
-<img src="/public/img/이미지1.jpeg" width="300" height="400">
+<img src="/assets/img/이미지1.jpeg" width="300" height="400">
 
-<img src="/public/img/common2.jpeg" width="300" height="400">
+<img src="/assets/img/common2.jpeg" width="300" height="400">
 
 ```python
 
@@ -49,9 +49,9 @@ plt.show()
 
 각각의 이미지에 대한 히스토그램은 다음과 같습니다.
 
-<img src="/public/img/이미지1_hist.png" width="300" height="200">
+<img src="/assets/img/이미지1_hist.png" width="300" height="200">
 
-<img src="/public/img/common2_hist.png" width="300" height="200">
+<img src="/assets/img/common2_hist.png" width="300" height="200">
 
 원래는 RGB와 같은 하나의 특징에 대한 값을 전부 그릴 수 있지만, 이미지의 분류에 있어서 밝기에 따라 RGB는 크게 흔들리는 성질이 있기 때문에 명암으로 구분하는 방법을 많이 사용한다고 들었습니다. 이 부분에 대해서는 확실하지 않기 때문에 더 공부를 진행하면서 알아보겠습니다.
 
@@ -86,16 +86,16 @@ plt.show()
 
 결과로는 다음과 같이 각각의 레벨이 구분 된 히스토그램이 만들어집니다.
 
-<img src="/public/img/이미지1_eqhist.png" width="300" height="200">
+<img src="/assets/img/이미지1_eqhist.png" width="300" height="200">
 
-<img src="/public/img/common2_eqhist.png" width="300" height="200">
+<img src="/assets/img/common2_eqhist.png" width="300" height="200">
 
 이 히스토그램을 기반으로 이미지를 띄워볼까요?
 
 구분하기 쉽게 두 사진의 before after를 합쳐서 띄워보겠습니다.
 
-<img src="/public/img/이미지1.png" width="600" height="400">
+<img src="/assets/img/이미지1.png" width="600" height="400">
 
-<img src="/public/img/common2.png" width="600" height="400">
+<img src="/assets/img/common2.png" width="600" height="400">
 
 이것으로 히스토그램에 대한 내용을 마치겠습니다.

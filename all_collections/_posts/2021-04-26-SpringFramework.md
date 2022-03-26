@@ -17,7 +17,7 @@ categories: Spring
 
 기업 규모의 애플리케이션 개발을 위해 만들어졌으며 대규모 데이터 처리에 적합하게 만들어졌습니다. 또한 스프링 컨테이너에 자바 객체를 담고 직접 관리해주는 IOC기반의 프레임워크입니다.
 
-#### 1. 제어의 역전 (IOC)
+### 1. 제어의 역전 (IOC)
 
 스프링 프레임워크의 **프레임워크** 라는 단어는 우리의 개발을 용이하게 해주고 효율을 높여주는 도구라고 말할 수 있습니다. 그리고 프레임워크가 제공하는 사용자가 제어해야하는 객체의 생성부터 생명주기까지 이러한 부분을 특정 객체에 위임하는 것을 제어의 역전(IOC)이라고 합니다.
 
@@ -84,7 +84,7 @@ Service는 해당 클래스가 실제 사용되는 비즈니스 로직임을 알
 
 IOC를 통해 결합도를 낮출 수 있다?
 
-##### 생성자 주입을 해야하는 이유?
+#### 생성자 주입을 해야하는 이유?
 
 1.	객체의 불변성
 
@@ -94,7 +94,7 @@ IOC를 통해 결합도를 낮출 수 있다?
 
 개발을 진행하며 순환 참조의 경우 오버플로우가 발생할 수 있는 문제를 미리 알 수 있다. 이유는 빈 객체를 생성하는 과정에서 순환 참조가 발생을 알 수 있기 때문
 
-#### 2. AOP ( 관점 지향 프로그래밍 )
+### 2. AOP ( 관점 지향 프로그래밍 )
 
 AOP는 말 그대로 특정 관점에서 모듈화를 진행하는 방식입니다. 예를 들면 특정 서비스를 제공하면서 소요되는 시간에 대한 로그를 얻고 싶을 경우에 서비스의 진행 관점에서 타이머를 만들 수 있습니다.
 
@@ -111,7 +111,7 @@ AOP는 다음과 같은 특징을 가지고 있습니다.
 -	프록시 패턴 기반의 AOP구현체를 사용합니다.
 -	스프링 빈에만 사용 가능합니다.
 
-#### 3. POJO (Plain Old Java Object)
+### 3. POJO (Plain Old Java Object)
 
 POJO는 가장 기본적인 자바 프로그래밍 방식을 사용하여 구현하는 방식입니다. 그래서 약자에 Plain Old라는 말이 들어간 것 같습니다.
 
@@ -119,7 +119,7 @@ POJO는 가장 기본적인 자바 프로그래밍 방식을 사용하여 구현
 
 애초에 EJB에서 해결하고 싶었던 문제는 필요한 기능에 대한 의존성 문제와 트랜잭션 처리였기 때문에 이 방식을 해결하기 위해 POJO를 이용한 스프링이 만들어졌습니다.
 
-#### 4. MVC (Model View Controller) 구조
+### 4. MVC (Model View Controller) 구조
 
 MVC구조는 사용자 인터페이스와 실제 비즈니스 로직을 구분하는 구조입니다.
 
@@ -131,9 +131,9 @@ Controller는 사용자에게 요청이 들어왔을 때 요청을 받아 원하
 
 #### 참고
 
--	https://dpdpwl.tistory.com/140
--	https://devlog-wjdrbs96.tistory.com/166
--	https://mangkyu.tistory.com/125?category=761302
--	https://engkimbs.tistory.com/746
--	https://shlee0882.tistory.com/206
--	https://khj93.tistory.com/entry/Spring-Spring-Framework%EB%9E%80-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC
+-	<https://dpdpwl.tistory.com/140>
+-	<https://devlog-wjdrbs96.tistory.com/166>
+-	<https://mangkyu.tistory.com/125?category=761302>
+-	<https://engkimbs.tistory.com/746>
+-	<https://shlee0882.tistory.com/206>
+-	<https://khj93.tistory.com/entry/Spring-Spring-Framework%EB%9E%80-%EA%B8%B0%EB%B3%B8-%EA%B0%9C%EB%85%90-%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC>

@@ -95,7 +95,7 @@ def get_document_vector(self,text):
 
 그림으로 보면 다음과 같습니다.
 
-![ex_screenshot](/public/img/KNN1.png)
+![ex_screenshot](/assets/img/KNN1.png)
 
 가장 간단한 방법이며, 구현도 쉽지만 큰 문제는 계산 횟수의 문제입니다. 이 방식은 N^2의 시간 복잡도를 가지고 있습니다. 왜냐하면 모든 점에 대해 가장 가까운 점을 찾기위해 모든 점과의 거리를 계산해야 하기 때문이죠. KNN은 간단하지만 강력한 방법으로 많이 사용되어 지면서 이러한 계산 속도를 줄이는 방법은 다양하게 발전해왔습니다.
 
@@ -107,11 +107,11 @@ def get_document_vector(self,text):
 
 그럼 한번 도전해보겠습니다.
 
-![ex_screenshot](/public/img/KNNSource.png)
-![ex_screenshot](/public/img/SimWords.png)
-![ex_screenshot](/public/img/KNNEX3.png)
-![ex_screenshot](/public/img/KNNEX2.png)
-![ex_screenshot](/public/img/KNNEX1.png)
+![ex_screenshot](/assets/img/KNNSource.png)
+![ex_screenshot](/assets/img/SimWords.png)
+![ex_screenshot](/assets/img/KNNEX3.png)
+![ex_screenshot](/assets/img/KNNEX2.png)
+![ex_screenshot](/assets/img/KNNEX1.png)
 
 다음과 같이 성공적으로 찾아낼 수 있었습니다.
 
@@ -135,15 +135,15 @@ KNN을 이용하면 비슷한 문장을 찾아 낼 수 있습니다. 하지만 �
 
 그럼 우리는 **단어**를 이용하여 입력한 텍스트와 비슷한 문장을 찾아보겠습니다. 방식은 간단합니다. 문장은 다음과 같은 형식으로 이루어져있습니다.
 
-![ex_screenshot](/public/img/SentToWordsEX.png)
+![ex_screenshot](/assets/img/SentToWordsEX.png)
 
 이러한 형태를 BagOfWords 형태로 나타내면 다음과 같습니다.
 
-![ex_screenshot](/public/img/BagOfWordsEX.png)
+![ex_screenshot](/assets/img/BagOfWordsEX.png)
 
 마찬가지로 이번엔 Word2Vec 형태로 표현해보도록 하겠습니다.
 
-![ex_screenshot](/public/img/Word2VecEX.png)
+![ex_screenshot](/assets/img/Word2VecEX.png)
 
 여기서 우리가 주목할 점은 1차원의 형태에서 2차원으로 문장을 표현 할 수 있게 된 점입니다. 그렇기에 우리는 CNN과 같은 기법을 텍스트에 적용할 수 있게 된 것이죠. 그러면 유사한 문장을 찾는 과정도 이러한 방법을 이용하는건 어떨까요?
 
