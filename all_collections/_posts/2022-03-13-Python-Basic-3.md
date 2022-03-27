@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Python Basic 3 - Function
-date: 2021-12-15 21:05:23 +0900
-category: Spring
+date: 2022-03-13 21:05:23 +0900
+category: Python
 use_math: true
 ---
 
