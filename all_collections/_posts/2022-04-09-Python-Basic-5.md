@@ -62,7 +62,11 @@ print(tmp.tmp1)
 
 [Namedtuple과 dataclass의 차이점2](https://velog.io/@yoonkangho/pythonic-dataclass)
 
-결과적으로
+위 블로그의 내용을 정리하면, namedtuple은 tuple의 특성을 이용하고, dataclass는 dictionary의 특성을 사용하고 있습니다. 그래서 다음의 특징이 있습니다.
+
+1. immutable, hashable, iterable, unpackable, comparable 과 같은 특성을 원하면 namedtuple을 사용하고, 상속과 빠른 access를 원한다면 dataclass를 하면 좋을 것 같습니다.
+2. namedtuple은 Sequencial(iter or lt , gt 등)한 특성을 가진 값을 저장 할 때 좋고, 그 외에는 dataclass를 사용 하면 되는 것 같습니다. 기본적으로 \_\_eq\_\_와 같은 부분은 dataclass도 자동으로 생성해줍니다.
+
 
 ### 간단한 인터페이스의 경우 클래스가 아닌 함수를 받아라
 
