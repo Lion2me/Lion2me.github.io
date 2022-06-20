@@ -73,4 +73,6 @@ DP -> sc 생성(spark application) -> 클러스터 매니저에 연결 -> 자원
 
 [Spark Cluster manager](https://artist-developer.tistory.com/8)
 
+## Spark Memory
 
+[Spark Memory에 관련 한 좋은 블로그](https://velog.io/@rymyung/Apache-Spark-Memory)
