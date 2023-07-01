@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: Python Tricks - 파이썬 팁 2
+title: Python Tricks - 파이썬 코드를 정돈하기 위한 패턴
 date: 2023-06-24 21:05:23 +0900
 category: DE
 use_math: true
