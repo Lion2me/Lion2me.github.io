@@ -1,10 +1,15 @@
 ---
 
 layout: post
-title: How to apply the Data Layer Architecture
+title: 데이터 민주화를 위한 데이터 레이어 구축 방안
 date: 2024-01-27 18:05:23 +0900
 category: DE
 use_math: true
+tags:
+- 데이터 민주화
+- 데이터 거버넌스
+- 데이터 레이어
+- 메달리온
 
 ---
 
