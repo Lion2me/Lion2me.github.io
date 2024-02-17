@@ -5,6 +5,10 @@ title: Spark Topology
 date: 2022-04-04 21:05:23 +0900
 category: Spark
 use_math: true
+tags:
+- 스파크
+- Spark
+- Spark 동작방식
 
 ---
 

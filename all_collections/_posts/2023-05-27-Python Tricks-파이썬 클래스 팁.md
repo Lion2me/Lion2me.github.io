@@ -5,6 +5,11 @@ title: Python Tricks - 파이썬 코드를 정돈하기 위한 패턴
 date: 2023-05-27 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- 이펙티브 파이썬
+- effective python
+- python tricks
+- 클래스 기본 함수
 
 ---
 

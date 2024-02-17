@@ -5,6 +5,10 @@ title: Spark SQL & DataFrame
 date: 2022-05-28 21:05:23 +0900
 category: Spark
 use_math: true
+tags:
+- Spark
+- Spark Catalyst
+- Spark Optimizer
 
 ---
 

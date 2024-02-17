@@ -4,6 +4,10 @@ title: Python Basic 3 - Function
 date: 2022-03-13 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+- 함수
 ---
 
 Python Basic 3 - Function

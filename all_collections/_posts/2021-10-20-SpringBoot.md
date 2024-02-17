@@ -4,6 +4,11 @@ title: Spring Boot
 date: 2021-09-25 21:05:23 +0900
 category: Spring
 use_math: true
+tags:
+- JAVA
+- 자바
+- 스프링
+- Spring
 ---
 
 Spring Boot

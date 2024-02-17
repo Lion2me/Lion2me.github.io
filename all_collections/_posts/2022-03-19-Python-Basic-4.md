@@ -4,6 +4,11 @@ title: Python Basic 4 - Comprehension
 date: 2022-03-19 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+- 컴프리핸션
+- 반복문
 ---
 
 Python Basic 4 - Comprehension

@@ -4,6 +4,13 @@ title: Python Basic 6 - Meta Class And Attribute
 date: 2022-04-12 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+- 메타 클래스
+- 파이썬 내부 변수
+- 파이썬 애트리뷰트
+- 파이썬 Attribute
 ---
 
 Python Basic 6 - Meta Class And Attribute

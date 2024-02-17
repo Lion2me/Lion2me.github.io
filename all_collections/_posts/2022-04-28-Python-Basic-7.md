@@ -4,6 +4,15 @@ title: Python Basic 7 - 동시성과 병렬성
 date: 2022-05-10 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+- 동시성
+- 멀티스레드
+- 멀티프로세스
+- 파이썬 동시성
+- 파이썬 병렬
+
 ---
 
 Python Basic 7 - 동시성과 병렬성

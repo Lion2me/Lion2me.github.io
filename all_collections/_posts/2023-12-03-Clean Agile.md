@@ -5,6 +5,9 @@ title: Clean Agile 을 읽고
 date: 2023-12-03 18:05:23 +0900
 category: DE
 use_math: true
+tags:
+- CleanAgile
+- 소프트웨어개발
 
 ---
 

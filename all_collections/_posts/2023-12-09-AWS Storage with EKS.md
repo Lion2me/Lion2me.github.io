@@ -5,6 +5,11 @@ title: EKS(k8s) with AWS Storage
 date: 2023-12-09 18:05:23 +0900
 category: DE
 use_math: true
+tags:
+- EKS
+- AWS 스토리지
+- 스토리지
+- 데이터 엔지니어
 
 ---
 

@@ -4,6 +4,9 @@ title: Python Basic 1 - Think Python
 date: 2022-03-06 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
 ---
 
 Python Basic 1 - Think Python

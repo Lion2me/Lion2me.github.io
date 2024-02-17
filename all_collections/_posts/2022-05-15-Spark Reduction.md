@@ -5,6 +5,10 @@ title: Spark Reduction
 date: 2022-04-04 21:05:23 +0900
 category: Spark
 use_math: true
+tags:
+- Spark
+- Spark Reduction
+- Spark 연산
 
 ---
 

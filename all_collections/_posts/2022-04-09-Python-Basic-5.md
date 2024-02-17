@@ -4,6 +4,11 @@ title: Python Basic 5 - Class And Interface
 date: 2022-04-09 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+- 클래스
+- 인터페이스
 ---
 
 Python Basic 5 - Class And Interface 

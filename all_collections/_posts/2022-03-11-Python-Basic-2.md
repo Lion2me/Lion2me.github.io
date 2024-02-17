@@ -4,6 +4,13 @@ title: Python Basic 2 - List & Dict
 date: 2022-03-11 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+- 리스트
+- 딕셔너리
+- 자료구조
+- 데이터구조
 ---
 
 Python Basic 2 - 리스트와 딕셔너리

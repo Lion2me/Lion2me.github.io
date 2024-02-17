@@ -4,6 +4,10 @@ title: Python Basic 8 - 강건성과 성능
 date: 2022-05-10 21:05:23 +0900
 category: Python
 use_math: true
+tags:
+- Python
+- 파이썬
+
 ---
 
 Python Basic 8 - 강건성과 성능
