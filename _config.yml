@@ -1,12 +1,12 @@
-title: Lion2me's Study Note
+title: 읽고 지나가는 노트
 markdown: kramdown
 url: ""
 baseurl: ""
 
 # for atom feed
 author:
-  name: Sharad Raj Singh Maurya
-  email: dev_sharad@outlook.com
+  name: Lion2me
+  email: nkj36@naver.com
 
 plugins:
   - jemoji
