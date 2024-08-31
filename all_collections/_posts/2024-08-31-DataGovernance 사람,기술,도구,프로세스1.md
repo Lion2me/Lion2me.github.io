@@ -1,4 +1,3 @@
-
 ---
 
 layout: post
@@ -9,7 +8,6 @@ use_math: true
 tags:
 - 데이터 거버넌스
 - Data Governance
-
 
 ---
 
