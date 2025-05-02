@@ -9,6 +9,9 @@ tags:
 - 스파크
 - Spark
 - Spark 동작방식
+- Spark Topology
+- Spark Cluster
+- Spark Worker
 
 ---
 
@@ -19,7 +22,7 @@ Spark는 Master Worker Topology로 구성되어 있습니다. 기본적으로 �
 
 과정은 다음의 그림을 보면 알 수 있습니다
 
-Spark 실행 그림
+![ex_screenshot](/assets/img/cluster-overview.png)
 
 ## Spark Driver Program
 
